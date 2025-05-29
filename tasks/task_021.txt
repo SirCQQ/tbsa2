@@ -1,0 +1,37 @@
+# Task ID: 21
+# Title: Dashboard Administrator
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea dashboard-ului principal pentru administratori
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. KPI-uri principale și metrici în timp real [pending]
+### Dependencies: None
+### Description: Implementarea indicatorilor cheie de performanță în timp real
+### Details:
+
+
+## 2. Grafice interactive pentru tendințe [pending]
+### Dependencies: None
+### Description: Grafice interactive pentru vizualizarea tendințelor de consum și plăți
+### Details:
+
+
+## 3. Alerte și notificări importante [pending]
+### Dependencies: None
+### Description: Sistem de alerte și notificări pentru evenimente importante
+### Details:
+
+
+## 4. Widget-uri personalizabile [pending]
+### Dependencies: None
+### Description: Sistem de widget-uri personalizabile pentru dashboard
+### Details:
+
+

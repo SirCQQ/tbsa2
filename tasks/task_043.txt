@@ -1,0 +1,37 @@
+# Task ID: 43
+# Title: Sistem de Onboarding
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Implementarea sistemului de onboarding pentru noi utilizatori
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Welcome wizard pentru admini [pending]
+### Dependencies: None
+### Description: Wizard de onboarding pentru administratorii noi
+### Details:
+
+
+## 2. Tour ghidat al aplicației [pending]
+### Dependencies: None
+### Description: Tour interactiv pentru prezentarea funcționalităților
+### Details:
+
+
+## 3. Sample data pentru demonstrații [pending]
+### Dependencies: None
+### Description: Date de exemplu pentru demonstrarea funcționalităților
+### Details:
+
+
+## 4. Progressive disclosure pentru funcționalități [pending]
+### Dependencies: None
+### Description: Sistem de dezvăluire progresivă a funcționalităților complexe
+### Details:
+
+

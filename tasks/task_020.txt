@@ -1,0 +1,37 @@
+# Task ID: 20
+# Title: Interfață Vizualizare Liste
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Dezvoltarea interfețelor pentru vizualizarea listelor de plată
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Interfață pentru administratori [pending]
+### Dependencies: None
+### Description: Interfață completă pentru administratori să vizualizeze și gestioneze listele
+### Details:
+
+
+## 2. Interfață pentru proprietari [pending]
+### Dependencies: None
+### Description: Interfață simplificată pentru proprietari să vadă propriile liste
+### Details:
+
+
+## 3. Detalii transparente ale calculelor [pending]
+### Dependencies: None
+### Description: Interfață pentru afișarea detaliată a calculelor din liste
+### Details:
+
+
+## 4. Istoric al tuturor listelor [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea istoricului complet al listelor de plată
+### Details:
+
+

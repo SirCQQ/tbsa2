@@ -1,0 +1,37 @@
+# Task ID: 29
+# Title: Notificări Email
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea sistemului de notificări prin email
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Integrare cu serviciu de email (SendGrid/Resend) [pending]
+### Dependencies: None
+### Description: Configurarea și integrarea cu servicii externe de email
+### Details:
+
+
+## 2. Template-uri responsive pentru email-uri [pending]
+### Dependencies: None
+### Description: Crearea template-urilor responsive și atractive pentru email-uri
+### Details:
+
+
+## 3. Sistem de tracking pentru email-uri trimise [pending]
+### Dependencies: None
+### Description: Sistem pentru tracking-ul email-urilor trimise și ratelor de deschidere
+### Details:
+
+
+## 4. Gestionarea unsubscribe [pending]
+### Dependencies: None
+### Description: Sistem pentru gestionarea dezabonărilor de la notificări email
+### Details:
+
+

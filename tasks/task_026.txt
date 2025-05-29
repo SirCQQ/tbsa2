@@ -1,0 +1,37 @@
+# Task ID: 26
+# Title: Sistem de Predicții
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Implementarea algoritmilor de machine learning pentru predicții
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Predicții consum viitor bazate pe istoric [pending]
+### Dependencies: None
+### Description: Algoritmi ML pentru predicția consumului viitor bazat pe datele istorice
+### Details:
+
+
+## 2. Predicții costuri pentru bugetare [pending]
+### Dependencies: None
+### Description: Sistem de predicție a costurilor pentru planificarea bugetară
+### Details:
+
+
+## 3. Identificarea riscurilor de neplată [pending]
+### Dependencies: None
+### Description: Algoritmi pentru identificarea proprietarilor cu risc de neplată
+### Details:
+
+
+## 4. Optimizarea consumului [pending]
+### Dependencies: None
+### Description: Sistem de recomandări pentru optimizarea consumului de apă
+### Details:
+
+

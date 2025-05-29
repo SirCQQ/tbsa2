@@ -1,0 +1,37 @@
+# Task ID: 36
+# Title: Integration Testing
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea testelor de integrare
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Teste pentru flow-uri complete [pending]
+### Dependencies: None
+### Description: Teste de integrare pentru flow-urile complete de utilizator
+### Details:
+
+
+## 2. Teste pentru API endpoints [pending]
+### Dependencies: None
+### Description: Teste de integrare pentru toate endpoint-urile API
+### Details:
+
+
+## 3. Teste pentru integrarea cu baza de date [pending]
+### Dependencies: None
+### Description: Teste pentru verificarea integrării corecte cu baza de date
+### Details:
+
+
+## 4. Setup test database [pending]
+### Dependencies: None
+### Description: Configurarea bazei de date de test și a fixture-urilor
+### Details:
+
+

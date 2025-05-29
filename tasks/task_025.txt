@@ -1,0 +1,37 @@
+# Task ID: 25
+# Title: Rapoarte Avansate
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Dezvoltarea rapoartelor complexe cu analiză avansată
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Analiză de tendințe sezoniere [pending]
+### Dependencies: None
+### Description: Algoritmi pentru analiza tendințelor sezoniere de consum
+### Details:
+
+
+## 2. Identificarea pattern-urilor de consum [pending]
+### Dependencies: None
+### Description: Sistem pentru identificarea pattern-urilor în consumul de apă
+### Details:
+
+
+## 3. Rapoarte de performanță asociație [pending]
+### Dependencies: None
+### Description: Rapoarte pentru evaluarea performanței asociațiilor
+### Details:
+
+
+## 4. Benchmarking între blocuri [pending]
+### Dependencies: None
+### Description: Sistem de comparare și benchmarking între blocuri
+### Details:
+
+

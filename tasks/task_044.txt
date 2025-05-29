@@ -1,0 +1,37 @@
+# Task ID: 44
+# Title: API Public
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Dezvoltarea API-ului public pentru integrări externe
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. REST API cu OpenAPI documentation [pending]
+### Dependencies: None
+### Description: API REST complet cu documentație OpenAPI pentru integrări externe
+### Details:
+
+
+## 2. Rate limiting și authentication pentru API [pending]
+### Dependencies: None
+### Description: Sistem de autentificare și rate limiting pentru API-ul public
+### Details:
+
+
+## 3. Webhooks pentru evenimente importante [pending]
+### Dependencies: None
+### Description: Sistem de webhooks pentru notificarea evenimentelor importante
+### Details:
+
+
+## 4. SDK-uri pentru limbaje populare [pending]
+### Dependencies: None
+### Description: SDK-uri pentru limbajele de programare populare
+### Details:
+
+

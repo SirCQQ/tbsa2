@@ -1,0 +1,37 @@
+# Task ID: 13
+# Title: API-uri Citiri Apă
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea API-urilor pentru gestionarea citirilor de apă
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. CRUD pentru citiri apă [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru gestionarea completă a citirilor de apă
+### Details:
+
+
+## 2. Validări pentru detectarea anomaliilor [pending]
+### Dependencies: None
+### Description: Algoritmi de validare pentru identificarea citirilor suspecte
+### Details:
+
+
+## 3. Sistem de aprobare/respingere citiri [pending]
+### Dependencies: None
+### Description: Workflow pentru aprobarea sau respingerea citirilor de către administratori
+### Details:
+
+
+## 4. Calcul automat al consumului [pending]
+### Dependencies: None
+### Description: Algoritmi pentru calcularea automată a consumului bazat pe citiri
+### Details:
+
+

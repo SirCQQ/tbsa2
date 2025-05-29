@@ -1,0 +1,37 @@
+# Task ID: 27
+# Title: Interfață Rapoarte
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Dezvoltarea interfețelor pentru generarea și vizualizarea rapoartelor
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Constructor vizual de rapoarte [pending]
+### Dependencies: None
+### Description: Interfață drag-and-drop pentru construirea rapoartelor personalizate
+### Details:
+
+
+## 2. Filtre și parametri personalizabili [pending]
+### Dependencies: None
+### Description: Sistem de filtre avansate și parametri personalizabili pentru rapoarte
+### Details:
+
+
+## 3. Programarea automată a rapoartelor [pending]
+### Dependencies: None
+### Description: Sistem pentru programarea și generarea automată a rapoartelor
+### Details:
+
+
+## 4. Sistem de partajare rapoarte [pending]
+### Dependencies: None
+### Description: Funcționalități pentru partajarea rapoartelor cu alți utilizatori
+### Details:
+
+

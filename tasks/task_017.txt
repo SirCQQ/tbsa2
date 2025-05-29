@@ -1,0 +1,37 @@
+# Task ID: 17
+# Title: API-uri Liste de Plată
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea logicii pentru generarea și gestionarea listelor de plată
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Algoritmi de calcul pentru costuri [pending]
+### Dependencies: None
+### Description: Implementarea algoritmilor pentru calcularea costurilor pe apartament
+### Details:
+
+
+## 2. CRUD pentru liste de plată și elemente [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru gestionarea completă a listelor de plată
+### Details:
+
+
+## 3. Sistem de aprobare și publicare [pending]
+### Dependencies: None
+### Description: Workflow pentru aprobarea și publicarea listelor de plată
+### Details:
+
+
+## 4. Calculul automați al restanțelor [pending]
+### Dependencies: None
+### Description: Algoritmi pentru calcularea automată a restanțelor și penalităților
+### Details:
+
+

@@ -1,0 +1,37 @@
+# Task ID: 10
+# Title: CRUD Utilizatori
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea funcționalităților pentru gestionarea utilizatorilor
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. API-uri pentru CRUD utilizatori [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru crearea, citirea, actualizarea și ștergerea utilizatorilor
+### Details:
+
+
+## 2. Interfață pentru adăugare/editare utilizatori [pending]
+### Dependencies: None
+### Description: Formulare și interfețe pentru gestionarea utilizatorilor
+### Details:
+
+
+## 3. Sistem de invitații pentru proprietari [pending]
+### Dependencies: None
+### Description: Funcționalitate pentru invitarea proprietarilor prin email
+### Details:
+
+
+## 4. Gestionarea statusului activ/inactiv [pending]
+### Dependencies: None
+### Description: Sistem pentru activarea/dezactivarea conturilor de utilizatori
+### Details:
+
+

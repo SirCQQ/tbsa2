@@ -1,0 +1,37 @@
+# Task ID: 15
+# Title: Interfață Proprietar pentru Citiri
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea interfețelor pentru proprietari să transmită citirile
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Formular simplu pentru transmitere citiri [pending]
+### Dependencies: None
+### Description: Interfață user-friendly pentru proprietari să introducă citirile
+### Details:
+
+
+## 2. Vizualizare istoric personal [pending]
+### Dependencies: None
+### Description: Interfață pentru proprietari să vadă istoricul propriilor citiri
+### Details:
+
+
+## 3. Notificări pentru deadline-uri [pending]
+### Dependencies: None
+### Description: Sistem de notificări pentru amintirea deadline-urilor de citiri
+### Details:
+
+
+## 4. Confirmări pentru citiri transmise [pending]
+### Dependencies: None
+### Description: Sistem de confirmare și feedback pentru citirile transmise
+### Details:
+
+

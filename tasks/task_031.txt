@@ -1,0 +1,37 @@
+# Task ID: 31
+# Title: Notificări Automate
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea sistemului de notificări automate
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Reminder-uri pentru deadline citiri [pending]
+### Dependencies: None
+### Description: Sistem automat de reminder-uri pentru deadline-urile de citiri
+### Details:
+
+
+## 2. Alerte pentru plăți în întârziere [pending]
+### Dependencies: None
+### Description: Notificări automate pentru plățile în întârziere și restanțe
+### Details:
+
+
+## 3. Notificări pentru consum anormal [pending]
+### Dependencies: None
+### Description: Alerte automate pentru detectarea consumului anormal de apă
+### Details:
+
+
+## 4. Notificări sistem și maintenance [pending]
+### Dependencies: None
+### Description: Notificări pentru evenimente de sistem și maintenance programat
+### Details:
+
+

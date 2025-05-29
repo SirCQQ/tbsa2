@@ -1,0 +1,37 @@
+# Task ID: 22
+# Title: Dashboard Proprietar
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea dashboard-ului pentru proprietari
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Vizualizare apartamente deținute [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea apartamentelor deținute de proprietar
+### Details:
+
+
+## 2. Grafice consum personal [pending]
+### Dependencies: None
+### Description: Grafice pentru vizualizarea consumului personal de apă
+### Details:
+
+
+## 3. Status plăți și restanțe [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea statusului plăților și restanțelor
+### Details:
+
+
+## 4. Notificări și reminder-uri [pending]
+### Dependencies: None
+### Description: Sistem de notificări și reminder-uri pentru proprietari
+### Details:
+
+

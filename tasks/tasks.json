@@ -3,14 +3,14 @@
   "description": "Platforma Digitală pentru Administrarea Asociațiilor de Proprietari",
   "tasks": [
     {
-      "id": "1",
+      "id": 1,
       "category": "Setup și Configurare",
       "title": "Configurare Proiect și Dependențe",
       "complexity": 3,
       "description": "Configurare completă a proiectului Next.js cu toate dependențele necesare",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Instalare și configurare TypeScript",
           "description": "Setup TypeScript cu configurări stricte pentru proiect",
           "status": "pending",
@@ -18,7 +18,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Setup Tailwind CSS și shadcn/ui",
           "description": "Configurare Tailwind CSS și instalare componentelor shadcn/ui",
           "status": "pending",
@@ -26,7 +26,7 @@
           "complexity": 6
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Configurare ESLint și Prettier",
           "description": "Setup linting și formatare automată a codului",
           "status": "pending",
@@ -34,7 +34,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Setup Husky pentru git hooks",
           "description": "Configurare pre-commit hooks pentru validare cod",
           "status": "pending",
@@ -42,7 +42,7 @@
           "complexity": 5
         },
         {
-          "id": "5",
+          "id": 5,
           "title": "Configurare structură de foldere",
           "description": "Organizarea structurii de foldere conform best practices",
           "status": "pending",
@@ -55,14 +55,14 @@
       "status": "pending"
     },
     {
-      "id": "2",
+      "id": 2,
       "category": "Setup și Configurare",
       "title": "Setup Prisma și Baza de Date",
       "complexity": 5,
       "description": "Configurarea Prisma ORM cu PostgreSQL și crearea schemei complete",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Instalare și configurare Prisma",
           "description": "Setup Prisma CLI și configurare inițială",
           "status": "pending",
@@ -70,7 +70,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Crearea schemei complete cu toate modelele",
           "description": "Definirea tuturor modelelor Prisma pentru aplicație",
           "status": "pending",
@@ -78,7 +78,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Setup conexiune PostgreSQL",
           "description": "Configurarea conexiunii la baza de date PostgreSQL",
           "status": "pending",
@@ -86,7 +86,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Crearea și rularea migrărilor inițiale",
           "description": "Generarea și aplicarea migrărilor pentru schema inițială",
           "status": "pending",
@@ -94,7 +94,7 @@
           "complexity": 4
         },
         {
-          "id": "5",
+          "id": 5,
           "title": "Setup Prisma Client",
           "description": "Configurarea Prisma Client pentru utilizare în aplicație",
           "status": "pending",
@@ -102,19 +102,19 @@
           "complexity": 5
         }
       ],
-      "dependencies": ["1"],
+      "dependencies": [1],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "3",
+      "id": 3,
       "category": "Setup și Configurare",
       "title": "Configurare Autentificare",
       "complexity": 5,
       "description": "Implementarea sistemului de autentificare cu NextAuth.js",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Setup NextAuth.js cu provider credentials",
           "description": "Configurarea NextAuth.js pentru autentificare cu email/parolă",
           "status": "pending",
@@ -122,7 +122,7 @@
           "complexity": 6
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Configurare sesiuni și middleware",
           "description": "Setup middleware pentru protejarea rutelor și gestionarea sesiunilor",
           "status": "pending",
@@ -130,7 +130,7 @@
           "complexity": 7
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Implementare pagini login/register",
           "description": "Crearea interfețelor pentru autentificare și înregistrare",
           "status": "pending",
@@ -138,7 +138,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Setup recuperare parolă",
           "description": "Implementarea funcționalității de resetare parolă",
           "status": "pending",
@@ -146,7 +146,7 @@
           "complexity": 5
         },
         {
-          "id": "5",
+          "id": 5,
           "title": "Integrare cu Prisma pentru utilizatori",
           "description": "Conectarea NextAuth.js cu modelele Prisma pentru utilizatori",
           "status": "pending",
@@ -154,19 +154,19 @@
           "complexity": 7
         }
       ],
-      "dependencies": ["2"],
+      "dependencies": [2],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "4",
+      "id": 4,
       "category": "Sistem de Permisiuni",
       "title": "Implementare Sistem de Permisiuni",
       "complexity": 8,
       "description": "Dezvoltarea sistemului granular de permisiuni bazat pe resurse și acțiuni",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Crearea enum-urilor pentru ResourceType și ActionType",
           "description": "Definirea tipurilor de resurse și acțiuni pentru sistemul de permisiuni",
           "status": "pending",
@@ -174,7 +174,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Implementarea middleware-ului de verificare permisiuni",
           "description": "Dezvoltarea middleware-ului pentru verificarea permisiunilor în API",
           "status": "pending",
@@ -182,7 +182,7 @@
           "complexity": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Dezvoltarea API-urilor pentru gestionarea permisiuni",
           "description": "Crearea endpoint-urilor pentru CRUD permisiuni și roluri",
           "status": "pending",
@@ -190,7 +190,7 @@
           "complexity": 5
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Crearea hook-urilor React pentru verificare permisiuni",
           "description": "Implementarea hook-urilor pentru verificarea permisiunilor în componente",
           "status": "pending",
@@ -198,19 +198,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["3"],
+      "dependencies": [3],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "5",
+      "id": 5,
       "category": "Sistem de Permisiuni",
       "title": "Interfață Gestionare Permisiuni",
       "complexity": 8,
       "description": "Dezvoltarea interfețelor pentru Super Admin să gestioneze permisiuni",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Creare matrice de permisiuni pentru roluri",
           "description": "Interfață pentru vizualizarea și editarea permisiunilor per rol",
           "status": "pending",
@@ -218,7 +218,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru override permisiuni per utilizator",
           "description": "Sistem pentru acordarea de permisiuni specifice utilizatorilor",
           "status": "pending",
@@ -226,7 +226,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Vizualizare permisiuni efective",
           "description": "Interfață pentru vizualizarea permisiunilor finale ale unui utilizator",
           "status": "pending",
@@ -234,7 +234,7 @@
           "complexity": 5
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Sistem de audit pentru modificări permisiuni",
           "description": "Logging și tracking pentru toate modificările de permisiuni",
           "status": "pending",
@@ -242,19 +242,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["4"],
+      "dependencies": [4],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "6",
+      "id": 6,
       "category": "Sistem de Permisiuni",
       "title": "Seed-uri și Date Inițiale",
       "complexity": 3,
       "description": "Popularea bazei de date cu roluri, permisiuni și date inițiale",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Crearea script-ului de seed pentru permisiuni",
           "description": "Script pentru popularea automată a permisiunilor în baza de date",
           "status": "pending",
@@ -262,7 +262,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Definirea rolurilor predefinite",
           "description": "Crearea rolurilor standard: SUPER_ADMIN, ADMIN, OWNER, etc.",
           "status": "pending",
@@ -270,7 +270,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Popularea descrierilor pentru permisiuni",
           "description": "Adăugarea descrierilor user-friendly pentru toate permisiunile",
           "status": "pending",
@@ -278,7 +278,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Crearea utilizatorului Super Admin implicit",
           "description": "Setup utilizator Super Admin pentru configurarea inițială",
           "status": "pending",
@@ -286,19 +286,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["4"],
+      "dependencies": [4],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "7",
+      "id": 7,
       "category": "Gestionarea Asociațiilor",
       "title": "CRUD Asociații",
       "complexity": 5,
       "description": "Implementarea funcționalităților pentru gestionarea asociațiilor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "API-uri pentru CRUD asociații",
           "description": "Endpoint-uri pentru crearea, citirea, actualizarea și ștergerea asociațiilor",
           "status": "pending",
@@ -306,7 +306,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru adăugare/editare asociații",
           "description": "Formulare și interfețe pentru gestionarea asociațiilor",
           "status": "pending",
@@ -314,7 +314,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Validări și verificări de integritate",
           "description": "Implementarea validărilor pentru datele asociațiilor",
           "status": "pending",
@@ -322,7 +322,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Sistem de căutare și filtrare",
           "description": "Funcționalități de căutare și filtrare pentru lista de asociații",
           "status": "pending",
@@ -330,19 +330,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["4"],
+      "dependencies": [4],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "8",
+      "id": 8,
       "category": "Gestionarea Asociațiilor",
       "title": "CRUD Blocuri",
       "complexity": 5,
       "description": "Implementarea funcționalităților pentru gestionarea blocurilor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "API-uri pentru CRUD blocuri",
           "description": "Endpoint-uri pentru gestionarea completă a blocurilor",
           "status": "pending",
@@ -350,7 +350,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru configurarea structurii blocului",
           "description": "Formulare pentru definirea etajelor și apartamentelor",
           "status": "pending",
@@ -358,7 +358,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Asocierea administratorilor cu blocurile",
           "description": "Sistem pentru atribuirea administratorilor la blocuri specifice",
           "status": "pending",
@@ -366,7 +366,7 @@
           "complexity": 2
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Validări pentru structură ierarhică",
           "description": "Verificări pentru consistența structurii asociație-bloc-apartament",
           "status": "pending",
@@ -374,19 +374,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["7"],
+      "dependencies": [7],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "9",
+      "id": 9,
       "category": "Gestionarea Asociațiilor",
       "title": "CRUD Apartamente",
       "complexity": 5,
       "description": "Implementarea funcționalităților pentru gestionarea apartamentelor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "API-uri pentru CRUD apartamente",
           "description": "Endpoint-uri pentru gestionarea completă a apartamentelor",
           "status": "pending",
@@ -394,7 +394,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru adăugare apartamente în bulk",
           "description": "Sistem pentru adăugarea rapidă a mai multor apartamente",
           "status": "pending",
@@ -402,7 +402,7 @@
           "complexity": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem de numerotare automată",
           "description": "Algoritm pentru numerotarea automată a apartamentelor",
           "status": "pending",
@@ -410,7 +410,7 @@
           "complexity": 2
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Gestionarea detaliilor apartamentelor (suprafață, camere)",
           "description": "Interfețe pentru configurarea caracteristicilor apartamentelor",
           "status": "pending",
@@ -418,19 +418,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["8"],
+      "dependencies": [8],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "10",
+      "id": 10,
       "category": "Gestionarea Utilizatorilor",
       "title": "CRUD Utilizatori",
       "complexity": 5,
       "description": "Implementarea funcționalităților pentru gestionarea utilizatorilor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "API-uri pentru CRUD utilizatori",
           "description": "Endpoint-uri pentru crearea, citirea, actualizarea și ștergerea utilizatorilor",
           "status": "pending",
@@ -438,7 +438,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru adăugare/editare utilizatori",
           "description": "Formulare și interfețe pentru gestionarea utilizatorilor",
           "status": "pending",
@@ -446,7 +446,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem de invitații pentru proprietari",
           "description": "Funcționalitate pentru invitarea proprietarilor prin email",
           "status": "pending",
@@ -454,7 +454,7 @@
           "complexity": 7
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Gestionarea statusului activ/inactiv",
           "description": "Sistem pentru activarea/dezactivarea conturilor de utilizatori",
           "status": "pending",
@@ -462,19 +462,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["4"],
+      "dependencies": [4],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "11",
+      "id": 11,
       "category": "Gestionarea Utilizatorilor",
       "title": "Asocierea Proprietarilor cu Apartamentele",
       "complexity": 5,
       "description": "Implementarea sistemului de asociere proprietari-apartamente",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "API-uri pentru asociere/disociere",
           "description": "Endpoint-uri pentru asocierea și disocierea proprietarilor de apartamente",
           "status": "pending",
@@ -482,7 +482,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru gestionarea proprietarilor",
           "description": "Interfețe pentru vizualizarea și editarea asocierilor proprietar-apartament",
           "status": "pending",
@@ -490,7 +490,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem pentru membri secundari ai apartamentelor",
           "description": "Funcționalitate pentru adăugarea de membri suplimentari la apartamente",
           "status": "pending",
@@ -498,7 +498,7 @@
           "complexity": 8
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Verificări și validări pentru asocieri",
           "description": "Validări pentru prevenirea asocierilor invalide sau duplicate",
           "status": "pending",
@@ -506,19 +506,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["10", "9"],
+      "dependencies": [10, 9],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "12",
+      "id": 12,
       "category": "Gestionarea Utilizatorilor",
       "title": "Dashboard Utilizatori",
       "complexity": 3,
       "description": "Crearea dashboard-ului pentru vizualizarea și gestionarea utilizatorilor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Lista utilizatorilor cu filtrare și căutare",
           "description": "Interfață pentru vizualizarea și filtrarea listei de utilizatori",
           "status": "pending",
@@ -526,7 +526,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Vizualizare detalii utilizator",
           "description": "Pagină de detalii pentru fiecare utilizator cu informații complete",
           "status": "pending",
@@ -534,7 +534,7 @@
           "complexity": 2
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Acțiuni în bulk pentru utilizatori",
           "description": "Funcționalități pentru operații în masă asupra utilizatorilor",
           "status": "pending",
@@ -542,7 +542,7 @@
           "complexity": 2
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Export lista utilizatori",
           "description": "Funcționalitate pentru exportul listei de utilizatori în diverse formate",
           "status": "pending",
@@ -550,19 +550,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["10"],
+      "dependencies": [10],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "13",
+      "id": 13,
       "category": "Gestionarea Citirilor",
       "title": "API-uri Citiri Apă",
       "complexity": 5,
       "description": "Implementarea API-urilor pentru gestionarea citirilor de apă",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "CRUD pentru citiri apă",
           "description": "Endpoint-uri pentru gestionarea completă a citirilor de apă",
           "status": "pending",
@@ -570,7 +570,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Validări pentru detectarea anomaliilor",
           "description": "Algoritmi de validare pentru identificarea citirilor suspecte",
           "status": "pending",
@@ -578,7 +578,7 @@
           "complexity": 6
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem de aprobare/respingere citiri",
           "description": "Workflow pentru aprobarea sau respingerea citirilor de către administratori",
           "status": "pending",
@@ -586,7 +586,7 @@
           "complexity": 7
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Calcul automat al consumului",
           "description": "Algoritmi pentru calcularea automată a consumului bazat pe citiri",
           "status": "pending",
@@ -594,19 +594,19 @@
           "complexity": 8
         }
       ],
-      "dependencies": ["11"],
+      "dependencies": [11],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "14",
+      "id": 14,
       "category": "Gestionarea Citirilor",
       "title": "Interfață Administrator pentru Citiri",
       "complexity": 5,
       "description": "Dezvoltarea interfețelor pentru administratori să gestioneze citirile",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Formular pentru introducerea citirilor în bulk",
           "description": "Interfață pentru introducerea rapidă a mai multor citiri simultan",
           "status": "pending",
@@ -614,7 +614,7 @@
           "complexity": 7
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Lista citirilor cu filtrare și status",
           "description": "Interfață pentru vizualizarea și filtrarea citirilor cu statusuri",
           "status": "pending",
@@ -622,7 +622,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Interfață pentru validarea citirilor",
           "description": "Sistem pentru aprobarea sau respingerea citirilor de către administratori",
           "status": "pending",
@@ -630,7 +630,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Vizualizare istoric citiri per apartament",
           "description": "Interfață pentru vizualizarea istoricului complet al citirilor per apartament",
           "status": "pending",
@@ -638,19 +638,19 @@
           "complexity": 5
         }
       ],
-      "dependencies": ["13"],
+      "dependencies": [13],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "15",
+      "id": 15,
       "category": "Gestionarea Citirilor",
       "title": "Interfață Proprietar pentru Citiri",
       "complexity": 3,
       "description": "Dezvoltarea interfețelor pentru proprietari să transmită citirile",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Formular simplu pentru transmitere citiri",
           "description": "Interfață user-friendly pentru proprietari să introducă citirile",
           "status": "pending",
@@ -658,7 +658,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Vizualizare istoric personal",
           "description": "Interfață pentru proprietari să vadă istoricul propriilor citiri",
           "status": "pending",
@@ -666,7 +666,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Notificări pentru deadline-uri",
           "description": "Sistem de notificări pentru amintirea deadline-urilor de citiri",
           "status": "pending",
@@ -674,7 +674,7 @@
           "complexity": 5
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Confirmări pentru citiri transmise",
           "description": "Sistem de confirmare și feedback pentru citirile transmise",
           "status": "pending",
@@ -682,19 +682,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["13"],
+      "dependencies": [13],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "16",
+      "id": 16,
       "category": "Gestionarea Citirilor",
       "title": "Sistem de Detectare Anomalii",
       "complexity": 8,
       "description": "Implementarea algoritmilor pentru detectarea citirilor anormale",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Algoritmi pentru detectarea variatiilor mari de consum",
           "description": "Algoritmi pentru identificarea schimbărilor bruște în consum",
           "status": "pending",
@@ -702,7 +702,7 @@
           "complexity": 8
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Comparații cu media apartamentelor similare",
           "description": "Sistem de comparare cu consumul mediu al apartamentelor similare",
           "status": "pending",
@@ -710,7 +710,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Alerte automate pentru administratori",
           "description": "Sistem de alertare automată pentru administratori în cazul anomaliilor",
           "status": "pending",
@@ -718,7 +718,7 @@
           "complexity": 2
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Sugestii pentru proprietari",
           "description": "Sistem de sugestii pentru proprietari bazat pe analiza consumului",
           "status": "pending",
@@ -726,19 +726,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["13"],
+      "dependencies": [13],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "17",
+      "id": 17,
       "category": "Liste de Plată",
       "title": "API-uri Liste de Plată",
       "complexity": 8,
       "description": "Implementarea logicii pentru generarea și gestionarea listelor de plată",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Algoritmi de calcul pentru costuri",
           "description": "Implementarea algoritmilor pentru calcularea costurilor pe apartament",
           "status": "pending",
@@ -746,7 +746,7 @@
           "complexity": 8
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "CRUD pentru liste de plată și elemente",
           "description": "Endpoint-uri pentru gestionarea completă a listelor de plată",
           "status": "pending",
@@ -754,7 +754,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem de aprobare și publicare",
           "description": "Workflow pentru aprobarea și publicarea listelor de plată",
           "status": "pending",
@@ -762,7 +762,7 @@
           "complexity": 6
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Calculul automați al restanțelor",
           "description": "Algoritmi pentru calcularea automată a restanțelor și penalităților",
           "status": "pending",
@@ -770,19 +770,19 @@
           "complexity": 8
         }
       ],
-      "dependencies": ["13"],
+      "dependencies": [13],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "18",
+      "id": 18,
       "category": "Liste de Plată",
       "title": "Generator Liste de Plată",
       "complexity": 8,
       "description": "Dezvoltarea sistemului automat de generare a listelor de plată",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Interfață pentru configurarea parametrilor de calcul",
           "description": "Interfață pentru setarea parametrilor de calcul pentru liste de plată",
           "status": "pending",
@@ -790,7 +790,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Generare automată bazată pe citiri",
           "description": "Sistem pentru generarea automată a listelor bazat pe citirile de apă",
           "status": "pending",
@@ -798,7 +798,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Preview înainte de publicare",
           "description": "Funcționalitate de previzualizare a listelor înainte de publicare",
           "status": "pending",
@@ -806,7 +806,7 @@
           "complexity": 7
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Sistem de template-uri personalizabile",
           "description": "Sistem pentru crearea și gestionarea template-urilor personalizate",
           "status": "pending",
@@ -814,19 +814,19 @@
           "complexity": 5
         }
       ],
-      "dependencies": ["17"],
+      "dependencies": [17],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "19",
+      "id": 19,
       "category": "Liste de Plată",
       "title": "Export și Distribuire",
       "complexity": 5,
       "description": "Implementarea sistemelor de export și distribuire a listelor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Export în PDF cu design personalizabil",
           "description": "Funcționalitate pentru exportul listelor în format PDF personalizabil",
           "status": "pending",
@@ -834,7 +834,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Export în Excel și CSV",
           "description": "Funcționalități pentru exportul în formate Excel și CSV",
           "status": "pending",
@@ -842,7 +842,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem de email automat pentru distribuire",
           "description": "Sistem automat pentru trimiterea listelor prin email",
           "status": "pending",
@@ -850,7 +850,7 @@
           "complexity": 8
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Configurarea template-urilor de email",
           "description": "Interfață pentru configurarea template-urilor de email",
           "status": "pending",
@@ -858,19 +858,19 @@
           "complexity": 6
         }
       ],
-      "dependencies": ["17"],
+      "dependencies": [17],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "20",
+      "id": 20,
       "category": "Liste de Plată",
       "title": "Interfață Vizualizare Liste",
       "complexity": 3,
       "description": "Dezvoltarea interfețelor pentru vizualizarea listelor de plată",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Interfață pentru administratori",
           "description": "Interfață completă pentru administratori să vizualizeze și gestioneze listele",
           "status": "pending",
@@ -878,7 +878,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Interfață pentru proprietari",
           "description": "Interfață simplificată pentru proprietari să vadă propriile liste",
           "status": "pending",
@@ -886,7 +886,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Detalii transparente ale calculelor",
           "description": "Interfață pentru afișarea detaliată a calculelor din liste",
           "status": "pending",
@@ -894,7 +894,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Istoric al tuturor listelor",
           "description": "Interfață pentru vizualizarea istoricului complet al listelor de plată",
           "status": "pending",
@@ -902,19 +902,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["17"],
+      "dependencies": [17],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "21",
+      "id": 21,
       "category": "Dashboard-uri",
       "title": "Dashboard Administrator",
       "complexity": 8,
       "description": "Dezvoltarea dashboard-ului principal pentru administratori",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "KPI-uri principale și metrici în timp real",
           "description": "Implementarea indicatorilor cheie de performanță în timp real",
           "status": "pending",
@@ -922,7 +922,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Grafice interactive pentru tendințe",
           "description": "Grafice interactive pentru vizualizarea tendințelor de consum și plăți",
           "status": "pending",
@@ -930,7 +930,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Alerte și notificări importante",
           "description": "Sistem de alerte și notificări pentru evenimente importante",
           "status": "pending",
@@ -938,7 +938,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Widget-uri personalizabile",
           "description": "Sistem de widget-uri personalizabile pentru dashboard",
           "status": "pending",
@@ -946,19 +946,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["17", "13"],
+      "dependencies": [17, 13],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "22",
+      "id": 22,
       "category": "Dashboard-uri",
       "title": "Dashboard Proprietar",
       "complexity": 5,
       "description": "Dezvoltarea dashboard-ului pentru proprietari",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Vizualizare apartamente deținute",
           "description": "Interfață pentru vizualizarea apartamentelor deținute de proprietar",
           "status": "pending",
@@ -966,7 +966,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Grafice consum personal",
           "description": "Grafice pentru vizualizarea consumului personal de apă",
           "status": "pending",
@@ -974,7 +974,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Status plăți și restanțe",
           "description": "Interfață pentru vizualizarea statusului plăților și restanțelor",
           "status": "pending",
@@ -982,7 +982,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Notificări și reminder-uri",
           "description": "Sistem de notificări și reminder-uri pentru proprietari",
           "status": "pending",
@@ -990,19 +990,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["15", "20"],
+      "dependencies": [15, 20],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "23",
+      "id": 23,
       "category": "Dashboard-uri",
       "title": "Dashboard Super Admin",
       "complexity": 5,
       "description": "Dezvoltarea dashboard-ului pentru Super Admin",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Monitoring utilizare sistem",
           "description": "Interfață pentru monitorizarea utilizării sistemului",
           "status": "pending",
@@ -1010,7 +1010,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Statistici globale",
           "description": "Dashboard cu statistici globale ale platformei",
           "status": "pending",
@@ -1018,7 +1018,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Health check-uri sistem",
           "description": "Interfață pentru verificarea stării sistemului",
           "status": "pending",
@@ -1026,7 +1026,7 @@
           "complexity": 5
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Managementul utilizatorilor și permisiunilor",
           "description": "Interfață centralizată pentru gestionarea utilizatorilor și permisiunilor",
           "status": "pending",
@@ -1034,19 +1034,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["5"],
+      "dependencies": [5],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "24",
+      "id": 24,
       "category": "Rapoarte și Analiză",
       "title": "Rapoarte de Bază",
       "complexity": 5,
       "description": "Implementarea rapoartelor esențiale pentru administratori",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Rapoarte de consum pe apartament/bloc",
           "description": "Rapoarte detaliate de consum pe apartament și bloc",
           "status": "pending",
@@ -1054,7 +1054,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Rapoarte de plăți și restanțe",
           "description": "Rapoarte pentru statusul plăților și restanțelor",
           "status": "pending",
@@ -1062,7 +1062,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Comparații între perioada",
           "description": "Rapoarte comparative între diferite perioade de timp",
           "status": "pending",
@@ -1070,7 +1070,7 @@
           "complexity": 5
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Export în multiple formate",
           "description": "Funcționalitate pentru exportul rapoartelor în diverse formate",
           "status": "pending",
@@ -1078,19 +1078,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["17", "13"],
+      "dependencies": [17, 13],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "25",
+      "id": 25,
       "category": "Rapoarte și Analiză",
       "title": "Rapoarte Avansate",
       "complexity": 8,
       "description": "Dezvoltarea rapoartelor complexe cu analiză avansată",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Analiză de tendințe sezoniere",
           "description": "Algoritmi pentru analiza tendințelor sezoniere de consum",
           "status": "pending",
@@ -1098,7 +1098,7 @@
           "complexity": 7
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Identificarea pattern-urilor de consum",
           "description": "Sistem pentru identificarea pattern-urilor în consumul de apă",
           "status": "pending",
@@ -1106,7 +1106,7 @@
           "complexity": 2
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Rapoarte de performanță asociație",
           "description": "Rapoarte pentru evaluarea performanței asociațiilor",
           "status": "pending",
@@ -1114,7 +1114,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Benchmarking între blocuri",
           "description": "Sistem de comparare și benchmarking între blocuri",
           "status": "pending",
@@ -1122,19 +1122,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["24"],
+      "dependencies": [24],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "26",
+      "id": 26,
       "category": "Rapoarte și Analiză",
       "title": "Sistem de Predicții",
       "complexity": 13,
       "description": "Implementarea algoritmilor de machine learning pentru predicții",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Predicții consum viitor bazate pe istoric",
           "description": "Algoritmi ML pentru predicția consumului viitor bazat pe datele istorice",
           "status": "pending",
@@ -1142,7 +1142,7 @@
           "complexity": 7
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Predicții costuri pentru bugetare",
           "description": "Sistem de predicție a costurilor pentru planificarea bugetară",
           "status": "pending",
@@ -1150,7 +1150,7 @@
           "complexity": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Identificarea riscurilor de neplată",
           "description": "Algoritmi pentru identificarea proprietarilor cu risc de neplată",
           "status": "pending",
@@ -1158,7 +1158,7 @@
           "complexity": 6
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Optimizarea consumului",
           "description": "Sistem de recomandări pentru optimizarea consumului de apă",
           "status": "pending",
@@ -1166,19 +1166,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["25"],
+      "dependencies": [25],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "27",
+      "id": 27,
       "category": "Rapoarte și Analiză",
       "title": "Interfață Rapoarte",
       "complexity": 5,
       "description": "Dezvoltarea interfețelor pentru generarea și vizualizarea rapoartelor",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Constructor vizual de rapoarte",
           "description": "Interfață drag-and-drop pentru construirea rapoartelor personalizate",
           "status": "pending",
@@ -1186,7 +1186,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Filtre și parametri personalizabili",
           "description": "Sistem de filtre avansate și parametri personalizabili pentru rapoarte",
           "status": "pending",
@@ -1194,7 +1194,7 @@
           "complexity": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Programarea automată a rapoartelor",
           "description": "Sistem pentru programarea și generarea automată a rapoartelor",
           "status": "pending",
@@ -1202,7 +1202,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Sistem de partajare rapoarte",
           "description": "Funcționalități pentru partajarea rapoartelor cu alți utilizatori",
           "status": "pending",
@@ -1210,19 +1210,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["24"],
+      "dependencies": [24],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "28",
+      "id": 28,
       "category": "Sistem de Notificări",
       "title": "Backend Notificări",
       "complexity": 5,
       "description": "Implementarea sistemului backend pentru notificări",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "API-uri pentru CRUD notificări",
           "description": "Endpoint-uri pentru gestionarea completă a notificărilor",
           "status": "pending",
@@ -1230,7 +1230,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Sistem de queue pentru procesarea în batch",
           "description": "Sistem de coadă pentru procesarea eficientă a notificărilor în batch",
           "status": "pending",
@@ -1238,7 +1238,7 @@
           "complexity": 6
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Template-uri dinamice pentru notificări",
           "description": "Sistem de template-uri dinamice și personalizabile pentru notificări",
           "status": "pending",
@@ -1246,7 +1246,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Configurarea preferințelor utilizatori",
           "description": "Interfață pentru configurarea preferințelor de notificare ale utilizatorilor",
           "status": "pending",
@@ -1254,19 +1254,19 @@
           "complexity": 5
         }
       ],
-      "dependencies": ["10"],
+      "dependencies": [10],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "29",
+      "id": 29,
       "category": "Sistem de Notificări",
       "title": "Notificări Email",
       "complexity": 5,
       "description": "Implementarea sistemului de notificări prin email",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Integrare cu serviciu de email (SendGrid/Resend)",
           "description": "Configurarea și integrarea cu servicii externe de email",
           "status": "pending",
@@ -1274,7 +1274,7 @@
           "complexity": 7
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Template-uri responsive pentru email-uri",
           "description": "Crearea template-urilor responsive și atractive pentru email-uri",
           "status": "pending",
@@ -1282,7 +1282,7 @@
           "complexity": 8
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sistem de tracking pentru email-uri trimise",
           "description": "Sistem pentru tracking-ul email-urilor trimise și ratelor de deschidere",
           "status": "pending",
@@ -1290,7 +1290,7 @@
           "complexity": 6
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Gestionarea unsubscribe",
           "description": "Sistem pentru gestionarea dezabonărilor de la notificări email",
           "status": "pending",
@@ -1298,19 +1298,19 @@
           "complexity": 6
         }
       ],
-      "dependencies": ["28"],
+      "dependencies": [28],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "30",
+      "id": 30,
       "category": "Sistem de Notificări",
       "title": "Notificări In-App",
       "complexity": 3,
       "description": "Implementarea notificărilor în aplicație",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Componente UI pentru notificări",
           "description": "Componente React pentru afișarea notificărilor în aplicație",
           "status": "pending",
@@ -1318,7 +1318,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Real-time updates cu WebSockets/SSE",
           "description": "Implementarea actualizărilor în timp real pentru notificări",
           "status": "pending",
@@ -1326,7 +1326,7 @@
           "complexity": 7
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Center de notificări",
           "description": "Interfață centralizată pentru vizualizarea tuturor notificărilor",
           "status": "pending",
@@ -1334,7 +1334,7 @@
           "complexity": 5
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Marcare ca citite/necitite",
           "description": "Funcționalitate pentru marcarea notificărilor ca citite sau necitite",
           "status": "pending",
@@ -1342,19 +1342,19 @@
           "complexity": 3
         }
       ],
-      "dependencies": ["28"],
+      "dependencies": [28],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "31",
+      "id": 31,
       "category": "Sistem de Notificări",
       "title": "Notificări Automate",
       "complexity": 8,
       "description": "Implementarea sistemului de notificări automate",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Reminder-uri pentru deadline citiri",
           "description": "Sistem automat de reminder-uri pentru deadline-urile de citiri",
           "status": "pending",
@@ -1362,7 +1362,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Alerte pentru plăți în întârziere",
           "description": "Notificări automate pentru plățile în întârziere și restanțe",
           "status": "pending",
@@ -1370,7 +1370,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Notificări pentru consum anormal",
           "description": "Alerte automate pentru detectarea consumului anormal de apă",
           "status": "pending",
@@ -1378,7 +1378,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Notificări sistem și maintenance",
           "description": "Notificări pentru evenimente de sistem și maintenance programat",
           "status": "pending",
@@ -1386,19 +1386,19 @@
           "complexity": 6
         }
       ],
-      "dependencies": ["29", "16"],
+      "dependencies": [29, 16],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "32",
+      "id": 32,
       "category": "UI/UX",
       "title": "Design System",
       "complexity": 5,
       "description": "Dezvoltarea unui design system consistent",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Definirea paletei de culori și tipografiei",
           "description": "Stabilirea paletei de culori și sistemului tipografic pentru aplicație",
           "status": "pending",
@@ -1406,7 +1406,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Crearea componentelor UI reutilizabile",
           "description": "Dezvoltarea unei biblioteci de componente UI reutilizabile",
           "status": "pending",
@@ -1414,7 +1414,7 @@
           "complexity": 2
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Ghiduri de styling și spacing",
           "description": "Documentarea ghidurilor de styling și spacing pentru consistență",
           "status": "pending",
@@ -1422,7 +1422,7 @@
           "complexity": 1
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Documentație design system",
           "description": "Crearea documentației complete pentru design system",
           "status": "pending",
@@ -1430,19 +1430,19 @@
           "complexity": 1
         }
       ],
-      "dependencies": ["1"],
+      "dependencies": [1],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "33",
+      "id": 33,
       "category": "UI/UX",
       "title": "Layout-uri Responsive",
       "complexity": 5,
       "description": "Implementarea design-ului responsive pentru toate dispozitivele",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Layout-uri pentru desktop, tablet, mobile",
           "description": "Implementarea layout-urilor responsive pentru toate tipurile de dispozitive",
           "status": "pending",
@@ -1450,7 +1450,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Navigație adaptabilă pentru mobile",
           "description": "Dezvoltarea sistemului de navigație optimizat pentru mobile",
           "status": "pending",
@@ -1458,7 +1458,7 @@
           "complexity": 2
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Optimizarea formularelor pentru touch",
           "description": "Optimizarea formularelor pentru interacțiunea touch pe mobile",
           "status": "pending",
@@ -1466,7 +1466,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Testing cross-browser",
           "description": "Testing și optimizare pentru compatibilitatea cross-browser",
           "status": "pending",
@@ -1474,19 +1474,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["32"],
+      "dependencies": [32],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "34",
+      "id": 34,
       "category": "UI/UX",
       "title": "Componente Complexe",
       "complexity": 8,
       "description": "Dezvoltarea componentelor UI complexe",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Tabele avansate cu sorting și filtrare",
           "description": "Componente de tabele avansate cu funcționalități de sorting și filtrare",
           "status": "pending",
@@ -1494,7 +1494,7 @@
           "complexity": 7
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Grafice interactive cu Chart.js/D3",
           "description": "Implementarea graficelor interactive pentru vizualizarea datelor",
           "status": "pending",
@@ -1502,7 +1502,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Formulare multi-step",
           "description": "Componente pentru formulare complexe cu mai mulți pași",
           "status": "pending",
@@ -1510,7 +1510,7 @@
           "complexity": 7
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Modal-uri și wizard-uri complexe",
           "description": "Componente avansate pentru modal-uri și wizard-uri interactive",
           "status": "pending",
@@ -1518,19 +1518,19 @@
           "complexity": 6
         }
       ],
-      "dependencies": ["32"],
+      "dependencies": [32],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "35",
+      "id": 35,
       "category": "Testing",
       "title": "Unit Testing",
       "complexity": 8,
       "description": "Implementarea testelor unitare pentru funcționalitățile critice",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Setup Jest și Testing Library",
           "description": "Configurarea framework-ului de testing Jest și React Testing Library",
           "status": "pending",
@@ -1538,7 +1538,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Teste pentru utilități și helper-e",
           "description": "Implementarea testelor unitare pentru funcțiile utilitare",
           "status": "pending",
@@ -1546,7 +1546,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Teste pentru componente React",
           "description": "Teste unitare pentru componentele React critice",
           "status": "pending",
@@ -1554,7 +1554,7 @@
           "complexity": 2
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Teste pentru API handlers",
           "description": "Teste unitare pentru handler-ele API și logica de business",
           "status": "pending",
@@ -1562,19 +1562,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["17", "13"],
+      "dependencies": [17, 13],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "36",
+      "id": 36,
       "category": "Testing",
       "title": "Integration Testing",
       "complexity": 8,
       "description": "Implementarea testelor de integrare",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Teste pentru flow-uri complete",
           "description": "Teste de integrare pentru flow-urile complete de utilizator",
           "status": "pending",
@@ -1582,7 +1582,7 @@
           "complexity": 7
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Teste pentru API endpoints",
           "description": "Teste de integrare pentru toate endpoint-urile API",
           "status": "pending",
@@ -1590,7 +1590,7 @@
           "complexity": 7
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Teste pentru integrarea cu baza de date",
           "description": "Teste pentru verificarea integrării corecte cu baza de date",
           "status": "pending",
@@ -1598,7 +1598,7 @@
           "complexity": 8
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Setup test database",
           "description": "Configurarea bazei de date de test și a fixture-urilor",
           "status": "pending",
@@ -1606,19 +1606,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["35"],
+      "dependencies": [35],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "37",
+      "id": 37,
       "category": "Testing",
       "title": "E2E Testing",
       "complexity": 8,
       "description": "Implementarea testelor end-to-end cu Playwright",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Setup Playwright",
           "description": "Configurarea framework-ului Playwright pentru teste E2E",
           "status": "pending",
@@ -1626,7 +1626,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Teste pentru flow-uri critice de utilizator",
           "description": "Teste E2E pentru flow-urile critice ale aplicației",
           "status": "pending",
@@ -1634,7 +1634,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Teste pentru diferite roluri de utilizator",
           "description": "Teste E2E pentru verificarea funcționalităților per rol de utilizator",
           "status": "pending",
@@ -1642,7 +1642,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Automated visual regression testing",
           "description": "Implementarea testelor automate pentru detectarea regresiilor vizuale",
           "status": "pending",
@@ -1650,19 +1650,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["21", "22"],
+      "dependencies": [21, 22],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "38",
+      "id": 38,
       "category": "Deployment",
       "title": "Setup CI/CD",
       "complexity": 5,
       "description": "Configurarea pipeline-ului de deployment automat",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "GitHub Actions pentru CI/CD",
           "description": "Configurarea GitHub Actions pentru pipeline-ul CI/CD",
           "status": "pending",
@@ -1670,7 +1670,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Automatic testing pe PR-uri",
           "description": "Setup testing automat pentru toate pull request-urile",
           "status": "pending",
@@ -1678,7 +1678,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Deployment automat pe Vercel",
           "description": "Configurarea deployment-ului automat pe platforma Vercel",
           "status": "pending",
@@ -1686,7 +1686,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Environment management",
           "description": "Gestionarea environment-urilor de development, staging și production",
           "status": "pending",
@@ -1694,19 +1694,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["1"],
+      "dependencies": [1],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "39",
+      "id": 39,
       "category": "Deployment",
       "title": "Monitoring și Logging",
       "complexity": 5,
       "description": "Implementarea sistemelor de monitorizare",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Setup Sentry pentru error tracking",
           "description": "Configurarea Sentry pentru tracking-ul erorilor în producție",
           "status": "pending",
@@ -1714,7 +1714,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Implementarea logging-ului structured",
           "description": "Implementarea unui sistem de logging structurat și centralizat",
           "status": "pending",
@@ -1722,7 +1722,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Performance monitoring",
           "description": "Setup monitoring pentru performanța aplicației",
           "status": "pending",
@@ -1730,7 +1730,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Setup alertes pentru probleme critice",
           "description": "Configurarea alertelor pentru probleme critice de sistem",
           "status": "pending",
@@ -1738,19 +1738,19 @@
           "complexity": 5
         }
       ],
-      "dependencies": ["38"],
+      "dependencies": [38],
       "priority": "medium",
       "status": "pending"
     },
     {
-      "id": "40",
+      "id": 40,
       "category": "Deployment",
       "title": "Backup și Securitate",
       "complexity": 5,
       "description": "Implementarea măsurilor de securitate și backup",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Automated database backups",
           "description": "Implementarea sistemului automat de backup pentru baza de date",
           "status": "pending",
@@ -1758,7 +1758,7 @@
           "complexity": 3
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Implementarea rate limiting",
           "description": "Setup rate limiting pentru protecția împotriva atacurilor",
           "status": "pending",
@@ -1766,7 +1766,7 @@
           "complexity": 3
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Security headers și CSP",
           "description": "Configurarea header-elor de securitate și Content Security Policy",
           "status": "pending",
@@ -1774,7 +1774,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Data encryption pentru date sensibile",
           "description": "Implementarea criptării pentru datele sensibile",
           "status": "pending",
@@ -1782,19 +1782,19 @@
           "complexity": 5
         }
       ],
-      "dependencies": ["38"],
+      "dependencies": [38],
       "priority": "high",
       "status": "pending"
     },
     {
-      "id": "41",
+      "id": 41,
       "category": "Documentație",
       "title": "Documentație Tehnică",
       "complexity": 3,
       "description": "Crearea documentației pentru dezvoltatori",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "README complet cu setup instructions",
           "description": "Documentație completă pentru setup-ul proiectului",
           "status": "pending",
@@ -1802,7 +1802,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "API documentation cu OpenAPI",
           "description": "Documentația completă a API-ului folosind OpenAPI/Swagger",
           "status": "pending",
@@ -1810,7 +1810,7 @@
           "complexity": 5
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Database schema documentation",
           "description": "Documentația schemei bazei de date și a relațiilor",
           "status": "pending",
@@ -1818,7 +1818,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Coding guidelines și best practices",
           "description": "Documentația cu ghidurile de coding și best practices",
           "status": "pending",
@@ -1826,19 +1826,19 @@
           "complexity": 2
         }
       ],
-      "dependencies": ["17"],
+      "dependencies": [17],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "42",
+      "id": 42,
       "category": "Documentație",
       "title": "Documentație Utilizatori",
       "complexity": 5,
       "description": "Crearea documentației pentru utilizatorii finali",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Ghiduri pas-cu-pas pentru administratori",
           "description": "Ghiduri detaliate pentru toate funcționalitățile administratorilor",
           "status": "pending",
@@ -1846,7 +1846,7 @@
           "complexity": 2
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Tutorial pentru proprietari",
           "description": "Tutorial simplu și intuitiv pentru proprietari",
           "status": "pending",
@@ -1854,7 +1854,7 @@
           "complexity": 1
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "FAQ și troubleshooting",
           "description": "Secțiune FAQ și ghiduri de troubleshooting",
           "status": "pending",
@@ -1862,7 +1862,7 @@
           "complexity": 2
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Video tutorials",
           "description": "Crearea video tutorial-urilor pentru funcționalitățile principale",
           "status": "pending",
@@ -1870,19 +1870,19 @@
           "complexity": 1
         }
       ],
-      "dependencies": ["21", "22"],
+      "dependencies": [21, 22],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "43",
+      "id": 43,
       "category": "Documentație",
       "title": "Sistem de Onboarding",
       "complexity": 5,
       "description": "Implementarea sistemului de onboarding pentru noi utilizatori",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Welcome wizard pentru admini",
           "description": "Wizard de onboarding pentru administratorii noi",
           "status": "pending",
@@ -1890,7 +1890,7 @@
           "complexity": 4
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Tour ghidat al aplicației",
           "description": "Tour interactiv pentru prezentarea funcționalităților",
           "status": "pending",
@@ -1898,7 +1898,7 @@
           "complexity": 1
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Sample data pentru demonstrații",
           "description": "Date de exemplu pentru demonstrarea funcționalităților",
           "status": "pending",
@@ -1906,7 +1906,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Progressive disclosure pentru funcționalități",
           "description": "Sistem de dezvăluire progresivă a funcționalităților complexe",
           "status": "pending",
@@ -1914,19 +1914,19 @@
           "complexity": 7
         }
       ],
-      "dependencies": ["21", "22"],
+      "dependencies": [21, 22],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "44",
+      "id": 44,
       "category": "Integrări",
       "title": "API Public",
       "complexity": 8,
       "description": "Dezvoltarea API-ului public pentru integrări externe",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "REST API cu OpenAPI documentation",
           "description": "API REST complet cu documentație OpenAPI pentru integrări externe",
           "status": "pending",
@@ -1934,7 +1934,7 @@
           "complexity": 5
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Rate limiting și authentication pentru API",
           "description": "Sistem de autentificare și rate limiting pentru API-ul public",
           "status": "pending",
@@ -1942,7 +1942,7 @@
           "complexity": 4
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Webhooks pentru evenimente importante",
           "description": "Sistem de webhooks pentru notificarea evenimentelor importante",
           "status": "pending",
@@ -1950,7 +1950,7 @@
           "complexity": 4
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "SDK-uri pentru limbaje populare",
           "description": "SDK-uri pentru limbajele de programare populare",
           "status": "pending",
@@ -1958,19 +1958,19 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["17", "13"],
+      "dependencies": [17, 13],
       "priority": "low",
       "status": "pending"
     },
     {
-      "id": "45",
+      "id": 45,
       "category": "Integrări",
       "title": "Integrări Sisteme Plată",
       "complexity": 8,
       "description": "Implementarea integrărilor cu sisteme de plată",
       "subtasks": [
         {
-          "id": "1",
+          "id": 1,
           "title": "Integrare Stripe pentru plăți online",
           "description": "Integrarea cu Stripe pentru procesarea plăților online",
           "status": "pending",
@@ -1978,7 +1978,7 @@
           "complexity": 6
         },
         {
-          "id": "2",
+          "id": 2,
           "title": "Integrare cu bănci românești",
           "description": "Integrări cu sistemele bancare românești pentru plăți",
           "status": "pending",
@@ -1986,7 +1986,7 @@
           "complexity": 7
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Reconcilierea automată a plăților",
           "description": "Sistem automat pentru reconcilierea plăților primite",
           "status": "pending",
@@ -1994,7 +1994,7 @@
           "complexity": 3
         },
         {
-          "id": "4",
+          "id": 4,
           "title": "Raportare automată către administratori",
           "description": "Sistem de raportare automată a plăților către administratori",
           "status": "pending",
@@ -2002,7 +2002,7 @@
           "complexity": 4
         }
       ],
-      "dependencies": ["17"],
+      "dependencies": [17],
       "priority": "low",
       "status": "pending"
     }

@@ -1,0 +1,37 @@
+# Task ID: 35
+# Title: Unit Testing
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea testelor unitare pentru funcționalitățile critice
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Setup Jest și Testing Library [pending]
+### Dependencies: None
+### Description: Configurarea framework-ului de testing Jest și React Testing Library
+### Details:
+
+
+## 2. Teste pentru utilități și helper-e [pending]
+### Dependencies: None
+### Description: Implementarea testelor unitare pentru funcțiile utilitare
+### Details:
+
+
+## 3. Teste pentru componente React [pending]
+### Dependencies: None
+### Description: Teste unitare pentru componentele React critice
+### Details:
+
+
+## 4. Teste pentru API handlers [pending]
+### Dependencies: None
+### Description: Teste unitare pentru handler-ele API și logica de business
+### Details:
+
+

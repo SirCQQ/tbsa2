@@ -1,0 +1,37 @@
+# Task ID: 28
+# Title: Backend Notificări
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea sistemului backend pentru notificări
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. API-uri pentru CRUD notificări [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru gestionarea completă a notificărilor
+### Details:
+
+
+## 2. Sistem de queue pentru procesarea în batch [pending]
+### Dependencies: None
+### Description: Sistem de coadă pentru procesarea eficientă a notificărilor în batch
+### Details:
+
+
+## 3. Template-uri dinamice pentru notificări [pending]
+### Dependencies: None
+### Description: Sistem de template-uri dinamice și personalizabile pentru notificări
+### Details:
+
+
+## 4. Configurarea preferințelor utilizatori [pending]
+### Dependencies: None
+### Description: Interfață pentru configurarea preferințelor de notificare ale utilizatorilor
+### Details:
+
+

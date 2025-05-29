@@ -1,0 +1,37 @@
+# Task ID: 41
+# Title: Documentație Tehnică
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Crearea documentației pentru dezvoltatori
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. README complet cu setup instructions [pending]
+### Dependencies: None
+### Description: Documentație completă pentru setup-ul proiectului
+### Details:
+
+
+## 2. API documentation cu OpenAPI [pending]
+### Dependencies: None
+### Description: Documentația completă a API-ului folosind OpenAPI/Swagger
+### Details:
+
+
+## 3. Database schema documentation [pending]
+### Dependencies: None
+### Description: Documentația schemei bazei de date și a relațiilor
+### Details:
+
+
+## 4. Coding guidelines și best practices [pending]
+### Dependencies: None
+### Description: Documentația cu ghidurile de coding și best practices
+### Details:
+
+

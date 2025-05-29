@@ -1,0 +1,37 @@
+# Task ID: 4
+# Title: Implementare Sistem de Permisiuni
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea sistemului granular de permisiuni bazat pe resurse și acțiuni
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Crearea enum-urilor pentru ResourceType și ActionType [pending]
+### Dependencies: None
+### Description: Definirea tipurilor de resurse și acțiuni pentru sistemul de permisiuni
+### Details:
+
+
+## 2. Implementarea middleware-ului de verificare permisiuni [pending]
+### Dependencies: None
+### Description: Dezvoltarea middleware-ului pentru verificarea permisiunilor în API
+### Details:
+
+
+## 3. Dezvoltarea API-urilor pentru gestionarea permisiuni [pending]
+### Dependencies: None
+### Description: Crearea endpoint-urilor pentru CRUD permisiuni și roluri
+### Details:
+
+
+## 4. Crearea hook-urilor React pentru verificare permisiuni [pending]
+### Dependencies: None
+### Description: Implementarea hook-urilor pentru verificarea permisiunilor în componente
+### Details:
+
+

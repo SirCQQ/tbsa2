@@ -1,0 +1,37 @@
+# Task ID: 33
+# Title: Layout-uri Responsive
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea design-ului responsive pentru toate dispozitivele
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Layout-uri pentru desktop, tablet, mobile [pending]
+### Dependencies: None
+### Description: Implementarea layout-urilor responsive pentru toate tipurile de dispozitive
+### Details:
+
+
+## 2. Navigație adaptabilă pentru mobile [pending]
+### Dependencies: None
+### Description: Dezvoltarea sistemului de navigație optimizat pentru mobile
+### Details:
+
+
+## 3. Optimizarea formularelor pentru touch [pending]
+### Dependencies: None
+### Description: Optimizarea formularelor pentru interacțiunea touch pe mobile
+### Details:
+
+
+## 4. Testing cross-browser [pending]
+### Dependencies: None
+### Description: Testing și optimizare pentru compatibilitatea cross-browser
+### Details:
+
+

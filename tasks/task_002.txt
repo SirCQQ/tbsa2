@@ -1,0 +1,43 @@
+# Task ID: 2
+# Title: Setup Prisma și Baza de Date
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Configurarea Prisma ORM cu PostgreSQL și crearea schemei complete
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Instalare și configurare Prisma [pending]
+### Dependencies: None
+### Description: Setup Prisma CLI și configurare inițială
+### Details:
+
+
+## 2. Crearea schemei complete cu toate modelele [pending]
+### Dependencies: None
+### Description: Definirea tuturor modelelor Prisma pentru aplicație
+### Details:
+
+
+## 3. Setup conexiune PostgreSQL [pending]
+### Dependencies: None
+### Description: Configurarea conexiunii la baza de date PostgreSQL
+### Details:
+
+
+## 4. Crearea și rularea migrărilor inițiale [pending]
+### Dependencies: None
+### Description: Generarea și aplicarea migrărilor pentru schema inițială
+### Details:
+
+
+## 5. Setup Prisma Client [pending]
+### Dependencies: None
+### Description: Configurarea Prisma Client pentru utilizare în aplicație
+### Details:
+
+

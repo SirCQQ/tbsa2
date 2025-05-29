@@ -1,0 +1,37 @@
+# Task ID: 32
+# Title: Design System
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Dezvoltarea unui design system consistent
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Definirea paletei de culori și tipografiei [pending]
+### Dependencies: None
+### Description: Stabilirea paletei de culori și sistemului tipografic pentru aplicație
+### Details:
+
+
+## 2. Crearea componentelor UI reutilizabile [pending]
+### Dependencies: None
+### Description: Dezvoltarea unei biblioteci de componente UI reutilizabile
+### Details:
+
+
+## 3. Ghiduri de styling și spacing [pending]
+### Dependencies: None
+### Description: Documentarea ghidurilor de styling și spacing pentru consistență
+### Details:
+
+
+## 4. Documentație design system [pending]
+### Dependencies: None
+### Description: Crearea documentației complete pentru design system
+### Details:
+
+

@@ -1,0 +1,37 @@
+# Task ID: 24
+# Title: Rapoarte de Bază
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea rapoartelor esențiale pentru administratori
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Rapoarte de consum pe apartament/bloc [pending]
+### Dependencies: None
+### Description: Rapoarte detaliate de consum pe apartament și bloc
+### Details:
+
+
+## 2. Rapoarte de plăți și restanțe [pending]
+### Dependencies: None
+### Description: Rapoarte pentru statusul plăților și restanțelor
+### Details:
+
+
+## 3. Comparații între perioada [pending]
+### Dependencies: None
+### Description: Rapoarte comparative între diferite perioade de timp
+### Details:
+
+
+## 4. Export în multiple formate [pending]
+### Dependencies: None
+### Description: Funcționalitate pentru exportul rapoartelor în diverse formate
+### Details:
+
+

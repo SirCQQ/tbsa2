@@ -1,0 +1,37 @@
+# Task ID: 12
+# Title: Dashboard Utilizatori
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Crearea dashboard-ului pentru vizualizarea și gestionarea utilizatorilor
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Lista utilizatorilor cu filtrare și căutare [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea și filtrarea listei de utilizatori
+### Details:
+
+
+## 2. Vizualizare detalii utilizator [pending]
+### Dependencies: None
+### Description: Pagină de detalii pentru fiecare utilizator cu informații complete
+### Details:
+
+
+## 3. Acțiuni în bulk pentru utilizatori [pending]
+### Dependencies: None
+### Description: Funcționalități pentru operații în masă asupra utilizatorilor
+### Details:
+
+
+## 4. Export lista utilizatori [pending]
+### Dependencies: None
+### Description: Funcționalitate pentru exportul listei de utilizatori în diverse formate
+### Details:
+
+

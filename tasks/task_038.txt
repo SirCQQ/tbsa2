@@ -1,0 +1,37 @@
+# Task ID: 38
+# Title: Setup CI/CD
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Configurarea pipeline-ului de deployment automat
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. GitHub Actions pentru CI/CD [pending]
+### Dependencies: None
+### Description: Configurarea GitHub Actions pentru pipeline-ul CI/CD
+### Details:
+
+
+## 2. Automatic testing pe PR-uri [pending]
+### Dependencies: None
+### Description: Setup testing automat pentru toate pull request-urile
+### Details:
+
+
+## 3. Deployment automat pe Vercel [pending]
+### Dependencies: None
+### Description: Configurarea deployment-ului automat pe platforma Vercel
+### Details:
+
+
+## 4. Environment management [pending]
+### Dependencies: None
+### Description: Gestionarea environment-urilor de development, staging și production
+### Details:
+
+

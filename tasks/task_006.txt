@@ -1,0 +1,37 @@
+# Task ID: 6
+# Title: Seed-uri și Date Inițiale
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Popularea bazei de date cu roluri, permisiuni și date inițiale
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Crearea script-ului de seed pentru permisiuni [pending]
+### Dependencies: None
+### Description: Script pentru popularea automată a permisiunilor în baza de date
+### Details:
+
+
+## 2. Definirea rolurilor predefinite [pending]
+### Dependencies: None
+### Description: Crearea rolurilor standard: SUPER_ADMIN, ADMIN, OWNER, etc.
+### Details:
+
+
+## 3. Popularea descrierilor pentru permisiuni [pending]
+### Dependencies: None
+### Description: Adăugarea descrierilor user-friendly pentru toate permisiunile
+### Details:
+
+
+## 4. Crearea utilizatorului Super Admin implicit [pending]
+### Dependencies: None
+### Description: Setup utilizator Super Admin pentru configurarea inițială
+### Details:
+
+

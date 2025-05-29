@@ -1,0 +1,37 @@
+# Task ID: 34
+# Title: Componente Complexe
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Dezvoltarea componentelor UI complexe
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Tabele avansate cu sorting și filtrare [pending]
+### Dependencies: None
+### Description: Componente de tabele avansate cu funcționalități de sorting și filtrare
+### Details:
+
+
+## 2. Grafice interactive cu Chart.js/D3 [pending]
+### Dependencies: None
+### Description: Implementarea graficelor interactive pentru vizualizarea datelor
+### Details:
+
+
+## 3. Formulare multi-step [pending]
+### Dependencies: None
+### Description: Componente pentru formulare complexe cu mai mulți pași
+### Details:
+
+
+## 4. Modal-uri și wizard-uri complexe [pending]
+### Dependencies: None
+### Description: Componente avansate pentru modal-uri și wizard-uri interactive
+### Details:
+
+

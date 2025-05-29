@@ -1,0 +1,37 @@
+# Task ID: 5
+# Title: Interfață Gestionare Permisiuni
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea interfețelor pentru Super Admin să gestioneze permisiuni
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Creare matrice de permisiuni pentru roluri [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea și editarea permisiunilor per rol
+### Details:
+
+
+## 2. Interfață pentru override permisiuni per utilizator [pending]
+### Dependencies: None
+### Description: Sistem pentru acordarea de permisiuni specifice utilizatorilor
+### Details:
+
+
+## 3. Vizualizare permisiuni efective [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea permisiunilor finale ale unui utilizator
+### Details:
+
+
+## 4. Sistem de audit pentru modificări permisiuni [pending]
+### Dependencies: None
+### Description: Logging și tracking pentru toate modificările de permisiuni
+### Details:
+
+

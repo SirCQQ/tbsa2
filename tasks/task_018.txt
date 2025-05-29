@@ -1,0 +1,37 @@
+# Task ID: 18
+# Title: Generator Liste de Plată
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea sistemului automat de generare a listelor de plată
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Interfață pentru configurarea parametrilor de calcul [pending]
+### Dependencies: None
+### Description: Interfață pentru setarea parametrilor de calcul pentru liste de plată
+### Details:
+
+
+## 2. Generare automată bazată pe citiri [pending]
+### Dependencies: None
+### Description: Sistem pentru generarea automată a listelor bazat pe citirile de apă
+### Details:
+
+
+## 3. Preview înainte de publicare [pending]
+### Dependencies: None
+### Description: Funcționalitate de previzualizare a listelor înainte de publicare
+### Details:
+
+
+## 4. Sistem de template-uri personalizabile [pending]
+### Dependencies: None
+### Description: Sistem pentru crearea și gestionarea template-urilor personalizate
+### Details:
+
+

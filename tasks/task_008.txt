@@ -1,0 +1,37 @@
+# Task ID: 8
+# Title: CRUD Blocuri
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea funcționalităților pentru gestionarea blocurilor
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. API-uri pentru CRUD blocuri [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru gestionarea completă a blocurilor
+### Details:
+
+
+## 2. Interfață pentru configurarea structurii blocului [pending]
+### Dependencies: None
+### Description: Formulare pentru definirea etajelor și apartamentelor
+### Details:
+
+
+## 3. Asocierea administratorilor cu blocurile [pending]
+### Dependencies: None
+### Description: Sistem pentru atribuirea administratorilor la blocuri specifice
+### Details:
+
+
+## 4. Validări pentru structură ierarhică [pending]
+### Dependencies: None
+### Description: Verificări pentru consistența structurii asociație-bloc-apartament
+### Details:
+
+

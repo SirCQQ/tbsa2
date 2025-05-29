@@ -1,0 +1,37 @@
+# Task ID: 30
+# Title: Notificări In-App
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea notificărilor în aplicație
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Componente UI pentru notificări [pending]
+### Dependencies: None
+### Description: Componente React pentru afișarea notificărilor în aplicație
+### Details:
+
+
+## 2. Real-time updates cu WebSockets/SSE [pending]
+### Dependencies: None
+### Description: Implementarea actualizărilor în timp real pentru notificări
+### Details:
+
+
+## 3. Center de notificări [pending]
+### Dependencies: None
+### Description: Interfață centralizată pentru vizualizarea tuturor notificărilor
+### Details:
+
+
+## 4. Marcare ca citite/necitite [pending]
+### Dependencies: None
+### Description: Funcționalitate pentru marcarea notificărilor ca citite sau necitite
+### Details:
+
+

@@ -1,0 +1,37 @@
+# Task ID: 7
+# Title: CRUD Asociații
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea funcționalităților pentru gestionarea asociațiilor
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. API-uri pentru CRUD asociații [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru crearea, citirea, actualizarea și ștergerea asociațiilor
+### Details:
+
+
+## 2. Interfață pentru adăugare/editare asociații [pending]
+### Dependencies: None
+### Description: Formulare și interfețe pentru gestionarea asociațiilor
+### Details:
+
+
+## 3. Validări și verificări de integritate [pending]
+### Dependencies: None
+### Description: Implementarea validărilor pentru datele asociațiilor
+### Details:
+
+
+## 4. Sistem de căutare și filtrare [pending]
+### Dependencies: None
+### Description: Funcționalități de căutare și filtrare pentru lista de asociații
+### Details:
+
+

@@ -1,0 +1,272 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Enum-uri pentru sistemul de permisiuni
+enum ResourceType {
+  USERS
+  ROLES
+  PERMISSIONS
+  ASSOCIATIONS
+  BUILDINGS
+  APARTMENTS
+  OWNERS
+  WATER_READINGS
+  PAYMENT_LISTS
+  PAYMENT_ITEMS
+  REPORTS
+  PREDICTIONS
+  NOTIFICATIONS
+  AUDIT_LOGS
+  SYSTEM_SETTINGS
+}
+
+enum ActionType {
+  CREATE
+  READ
+  UPDATE
+  DELETE
+  MANAGE
+  APPROVE
+  REJECT
+  EXPORT
+  IMPORT
+  ASSIGN
+}
+
+// Enum pentru statusul listelor de plată
+enum PaymentListStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+// Enum pentru tipurile de notificări
+enum NotificationType {
+  READING_REMINDER
+  PAYMENT_DUE
+  ABNORMAL_CONSUMPTION
+  SYSTEM_NOTIFICATION
+}
+
+// Modele pentru utilizatori și permisiuni
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  roleId    String
+  role      Role     @relation(fields: [roleId], references: [id])
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relații
+  administeredBuildings Building[]        @relation("Administrator")
+  ownedApartments       ApartmentOwner[]
+  memberApartments      ApartmentMember[]
+  waterReadings         WaterReading[]
+  notifications         Notification[]
+  userPermissions       UserPermission[]
+  createdPermissions    UserPermission[]  @relation("PermissionCreator")
+}
+
+model Role {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  isSystem    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relații
+  users           User[]
+  rolePermissions RolePermission[]
+}
+
+model Permission {
+  id          String       @id @default(cuid())
+  resource    ResourceType
+  action      ActionType
+  description String // Descriere clară a permisiunii
+  createdAt   DateTime     @default(now())
+
+  // Relații
+  rolePermissions RolePermission[]
+  userPermissions UserPermission[]
+
+  @@unique([resource, action])
+}
+
+model RolePermission {
+  roleId       String
+  permissionId String
+  role         Role       @relation(fields: [roleId], references: [id])
+  permission   Permission @relation(fields: [permissionId], references: [id])
+  createdAt    DateTime   @default(now())
+  createdBy    String? // ID-ul Super Admin-ului care a acordat permisiunea
+
+  @@id([roleId, permissionId])
+}
+
+model UserPermission {
+  userId        String
+  permissionId  String
+  user          User       @relation(fields: [userId], references: [id])
+  permission    Permission @relation(fields: [permissionId], references: [id])
+  granted       Boolean    @default(true) // true = acordat, false = revocat explicit
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  createdBy     String // ID-ul Super Admin-ului care a acordat permisiunea
+  createdByUser User       @relation("PermissionCreator", fields: [createdBy], references: [id])
+
+  @@id([userId, permissionId])
+}
+
+// Modele pentru asociații și blocuri
+model Association {
+  id         String   @id @default(cuid())
+  name       String
+  address    String
+  fiscalCode String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relații
+  buildings Building[]
+}
+
+model Building {
+  id            String      @id @default(cuid())
+  name          String
+  address       String
+  floors        Int
+  associationId String
+  association   Association @relation(fields: [associationId], references: [id])
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  // Relații
+  administrators User[]        @relation("Administrator")
+  apartments     Apartment[]
+  paymentLists   PaymentList[]
+}
+
+model Apartment {
+  id         String   @id @default(cuid())
+  number     String
+  floor      Int
+  rooms      Int?
+  area       Float?
+  buildingId String
+  building   Building @relation(fields: [buildingId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relații
+  owners        ApartmentOwner[]
+  members       ApartmentMember[]
+  waterReadings WaterReading[]
+  paymentItems  PaymentItem[]
+}
+
+model ApartmentOwner {
+  userId      String
+  apartmentId String
+  user        User      @relation(fields: [userId], references: [id])
+  apartment   Apartment @relation(fields: [apartmentId], references: [id])
+  createdAt   DateTime  @default(now())
+
+  @@id([userId, apartmentId])
+}
+
+model ApartmentMember {
+  userId      String
+  apartmentId String
+  user        User      @relation(fields: [userId], references: [id])
+  apartment   Apartment @relation(fields: [apartmentId], references: [id])
+  createdAt   DateTime  @default(now())
+
+  @@id([userId, apartmentId])
+}
+
+// Modele pentru citiri apă și plăți
+model WaterReading {
+  id          String    @id @default(cuid())
+  apartmentId String
+  apartment   Apartment @relation(fields: [apartmentId], references: [id])
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  readingDate DateTime
+  coldWater   Float
+  hotWater    Float?
+  validated   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model PaymentList {
+  id         String            @id @default(cuid())
+  buildingId String
+  building   Building          @relation(fields: [buildingId], references: [id])
+  month      Int
+  year       Int
+  status     PaymentListStatus @default(DRAFT)
+  createdAt  DateTime          @default(now())
+  updatedAt  DateTime          @updatedAt
+
+  // Relații
+  items PaymentItem[]
+
+  @@unique([buildingId, month, year])
+}
+
+model PaymentItem {
+  id                   String      @id @default(cuid())
+  paymentListId        String
+  paymentList          PaymentList @relation(fields: [paymentListId], references: [id])
+  apartmentId          String
+  apartment            Apartment   @relation(fields: [apartmentId], references: [id])
+  coldWaterConsumption Float
+  hotWaterConsumption  Float?
+  coldWaterCost        Float
+  hotWaterCost         Float?
+  otherCosts           Float?
+  totalAmount          Float
+  isPaid               Boolean     @default(false)
+  paidAt               DateTime?
+  createdAt            DateTime    @default(now())
+  updatedAt            DateTime    @updatedAt
+}
+
+// Model pentru notificări
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id])
+  type      NotificationType
+  title     String
+  message   String
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+}
+
+// Model pentru audit log
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String
+  action     String
+  resource   String
+  resourceId String?
+  details    Json?
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+}

@@ -1,0 +1,37 @@
+# Task ID: 14
+# Title: Interfață Administrator pentru Citiri
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Dezvoltarea interfețelor pentru administratori să gestioneze citirile
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Formular pentru introducerea citirilor în bulk [pending]
+### Dependencies: None
+### Description: Interfață pentru introducerea rapidă a mai multor citiri simultan
+### Details:
+
+
+## 2. Lista citirilor cu filtrare și status [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea și filtrarea citirilor cu statusuri
+### Details:
+
+
+## 3. Interfață pentru validarea citirilor [pending]
+### Dependencies: None
+### Description: Sistem pentru aprobarea sau respingerea citirilor de către administratori
+### Details:
+
+
+## 4. Vizualizare istoric citiri per apartament [pending]
+### Dependencies: None
+### Description: Interfață pentru vizualizarea istoricului complet al citirilor per apartament
+### Details:
+
+

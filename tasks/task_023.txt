@@ -1,0 +1,37 @@
+# Task ID: 23
+# Title: Dashboard Super Admin
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Dezvoltarea dashboard-ului pentru Super Admin
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Monitoring utilizare sistem [pending]
+### Dependencies: None
+### Description: Interfață pentru monitorizarea utilizării sistemului
+### Details:
+
+
+## 2. Statistici globale [pending]
+### Dependencies: None
+### Description: Dashboard cu statistici globale ale platformei
+### Details:
+
+
+## 3. Health check-uri sistem [pending]
+### Dependencies: None
+### Description: Interfață pentru verificarea stării sistemului
+### Details:
+
+
+## 4. Managementul utilizatorilor și permisiunilor [pending]
+### Dependencies: None
+### Description: Interfață centralizată pentru gestionarea utilizatorilor și permisiunilor
+### Details:
+
+

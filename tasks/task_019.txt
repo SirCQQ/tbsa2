@@ -1,0 +1,37 @@
+# Task ID: 19
+# Title: Export și Distribuire
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea sistemelor de export și distribuire a listelor
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Export în PDF cu design personalizabil [pending]
+### Dependencies: None
+### Description: Funcționalitate pentru exportul listelor în format PDF personalizabil
+### Details:
+
+
+## 2. Export în Excel și CSV [pending]
+### Dependencies: None
+### Description: Funcționalități pentru exportul în formate Excel și CSV
+### Details:
+
+
+## 3. Sistem de email automat pentru distribuire [pending]
+### Dependencies: None
+### Description: Sistem automat pentru trimiterea listelor prin email
+### Details:
+
+
+## 4. Configurarea template-urilor de email [pending]
+### Dependencies: None
+### Description: Interfață pentru configurarea template-urilor de email
+### Details:
+
+

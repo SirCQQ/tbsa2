@@ -1,0 +1,37 @@
+# Task ID: 11
+# Title: Asocierea Proprietarilor cu Apartamentele
+# Status: pending
+# Dependencies: None
+# Priority: high
+# Description: Implementarea sistemului de asociere proprietari-apartamente
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. API-uri pentru asociere/disociere [pending]
+### Dependencies: None
+### Description: Endpoint-uri pentru asocierea și disocierea proprietarilor de apartamente
+### Details:
+
+
+## 2. Interfață pentru gestionarea proprietarilor [pending]
+### Dependencies: None
+### Description: Interfețe pentru vizualizarea și editarea asocierilor proprietar-apartament
+### Details:
+
+
+## 3. Sistem pentru membri secundari ai apartamentelor [pending]
+### Dependencies: None
+### Description: Funcționalitate pentru adăugarea de membri suplimentari la apartamente
+### Details:
+
+
+## 4. Verificări și validări pentru asocieri [pending]
+### Dependencies: None
+### Description: Validări pentru prevenirea asocierilor invalide sau duplicate
+### Details:
+
+

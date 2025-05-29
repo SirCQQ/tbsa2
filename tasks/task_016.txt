@@ -1,0 +1,37 @@
+# Task ID: 16
+# Title: Sistem de Detectare Anomalii
+# Status: pending
+# Dependencies: None
+# Priority: medium
+# Description: Implementarea algoritmilor pentru detectarea citirilor anormale
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Algoritmi pentru detectarea variatiilor mari de consum [pending]
+### Dependencies: None
+### Description: Algoritmi pentru identificarea schimbărilor bruște în consum
+### Details:
+
+
+## 2. Comparații cu media apartamentelor similare [pending]
+### Dependencies: None
+### Description: Sistem de comparare cu consumul mediu al apartamentelor similare
+### Details:
+
+
+## 3. Alerte automate pentru administratori [pending]
+### Dependencies: None
+### Description: Sistem de alertare automată pentru administratori în cazul anomaliilor
+### Details:
+
+
+## 4. Sugestii pentru proprietari [pending]
+### Dependencies: None
+### Description: Sistem de sugestii pentru proprietari bazat pe analiza consumului
+### Details:
+
+

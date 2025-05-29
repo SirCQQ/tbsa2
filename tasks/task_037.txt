@@ -1,0 +1,37 @@
+# Task ID: 37
+# Title: E2E Testing
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Implementarea testelor end-to-end cu Playwright
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Setup Playwright [pending]
+### Dependencies: None
+### Description: Configurarea framework-ului Playwright pentru teste E2E
+### Details:
+
+
+## 2. Teste pentru flow-uri critice de utilizator [pending]
+### Dependencies: None
+### Description: Teste E2E pentru flow-urile critice ale aplicației
+### Details:
+
+
+## 3. Teste pentru diferite roluri de utilizator [pending]
+### Dependencies: None
+### Description: Teste E2E pentru verificarea funcționalităților per rol de utilizator
+### Details:
+
+
+## 4. Automated visual regression testing [pending]
+### Dependencies: None
+### Description: Implementarea testelor automate pentru detectarea regresiilor vizuale
+### Details:
+
+

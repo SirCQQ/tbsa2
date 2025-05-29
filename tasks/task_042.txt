@@ -1,0 +1,37 @@
+# Task ID: 42
+# Title: Documentație Utilizatori
+# Status: pending
+# Dependencies: None
+# Priority: low
+# Description: Crearea documentației pentru utilizatorii finali
+# Details:
+
+
+# Test Strategy:
+
+
+# Subtasks:
+## 1. Ghiduri pas-cu-pas pentru administratori [pending]
+### Dependencies: None
+### Description: Ghiduri detaliate pentru toate funcționalitățile administratorilor
+### Details:
+
+
+## 2. Tutorial pentru proprietari [pending]
+### Dependencies: None
+### Description: Tutorial simplu și intuitiv pentru proprietari
+### Details:
+
+
+## 3. FAQ și troubleshooting [pending]
+### Dependencies: None
+### Description: Secțiune FAQ și ghiduri de troubleshooting
+### Details:
+
+
+## 4. Video tutorials [pending]
+### Dependencies: None
+### Description: Crearea video tutorial-urilor pentru funcționalitățile principale
+### Details:
+
+
