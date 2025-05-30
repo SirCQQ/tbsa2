@@ -1,0 +1,120 @@
+---
+description: 
+globs: *.tsx
+alwaysApply: false
+---
+# Color Theming with Tailwind CSS
+
+To ensure consistent theming and smooth transitions between light and dark modes, follow these guidelines for color usage, especially for backgrounds and custom colors.
+
+## 1. Prioritize Semantic Background Colors
+
+- **Always prefer using Tailwind's semantic color utilities** for background colors. These are typically tied to CSS variables defined for light and dark modes in `src/app/globals.css` or a similar global stylesheet.
+- This ensures that components adapt correctly to the current theme (light or dark) without requiring mode-specific classes within the component itself.
+
+```typescript
+// ✅ DO: Use semantic background colors
+// For the main page background
+<div className="bg-background text-foreground">
+  Page content...
+</div>
+
+// For card elements
+<div className="bg-card text-card-foreground p-4 rounded-lg shadow">
+  Card content...
+</div>
+
+// For muted sections or less prominent backgrounds
+<section className="bg-muted text-muted-foreground py-8">
+  Muted section content...
+</section>
+
+// For primary action elements (though often applied to buttons/links, can be backgrounds)
+<div className="bg-primary text-primary-foreground p-4">
+  Primary section...
+</div>
+```
+
+- **Available Semantic Color Utilities (Examples for `bg-` prefix, also applicable for `text-`, `border-`, etc.):**
+  - `bg-background` / `text-foreground`
+  - `bg-card` / `text-card-foreground`
+  - `bg-popover` / `text-popover-foreground`
+  - `bg-primary` / `text-primary-foreground`
+  - `bg-secondary` / `text-secondary-foreground`
+  - `bg-muted` / `text-muted-foreground`
+  - `bg-accent` / `text-accent-foreground`
+  - `bg-destructive` / `text-destructive-foreground`
+  - `border-border`
+  - `bg-input`
+  - `ring-ring`
+
+- **Avoid hardcoding colors** or using classes that are specific to one mode (e.g., `bg-white dark:bg-black`) unless absolutely necessary and the semantic colors do not suffice. The goal is to rely on the pre-defined theme variables.
+
+```typescript
+// ❌ DON'T: Hardcode colors or use explicit light/dark mode classes for general backgrounds if semantic alternatives exist
+<div className="bg-gray-100 dark:bg-neutral-800"> // Prefer bg-muted or bg-card if appropriate
+  Content...
+</div>
+```
+
+## 2. Define Custom Colors in Tailwind Config
+
+- If your project requires specific brand colors or other custom colors not covered by the default Tailwind palette or the extended semantic colors, **these MUST be defined in your `tailwind.config.js` (or `tailwind.config.ts`) file**.
+- Add custom colors under the `theme.extend.colors` section.
+
+```javascript
+// tailwind.config.js (example)
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'custom-brand-blue': '#007BFF',
+        'custom-brand-green': {
+          light: '#6BDBAD',
+          DEFAULT: '#00A86B',
+          dark: '#007F52',
+        },
+        'custom-alert-yellow': 'var(--alert-yellow)', // If using CSS variables for custom colors
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+## 3. Use Tailwind Utilities for Custom Colors
+
+- Once custom colors are defined in the Tailwind configuration, **always use their corresponding Tailwind utility classes** to apply them in your components.
+- This maintains consistency and allows for easier updates if the custom colors need to be changed globally.
+
+```typescript
+// ✅ DO: Use Tailwind utility classes for custom colors defined in the config
+<button className="bg-custom-brand-blue hover:bg-custom-brand-blue/90 text-white">
+  Custom Blue Button
+</button>
+
+<div className="bg-custom-brand-green text-white p-4">
+  Custom Green Section (uses DEFAULT shade)
+</div>
+
+<div className="bg-custom-brand-green-light text-black p-4">
+  Light Custom Green Section
+</div>
+
+<div className="text-custom-alert-yellow">
+  This is an alert using a CSS variable via Tailwind.
+</div>
+```
+
+```typescript
+// ❌ DON'T: Use inline styles or hardcode hex values for custom colors in components
+<button style={{ backgroundColor: '#007BFF' }}>
+  Don't do this
+</button>
+
+<div className="bg-[#00A86B]">  // Prefer bg-custom-brand-green if defined
+  Avoid arbitrary values if a theme color exists
+</div>
+```
+
+By adhering to these guidelines, you ensure that the application's color scheme is managed centrally, is easily themeable, and avoids inconsistencies.
