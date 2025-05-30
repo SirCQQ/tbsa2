@@ -1,0 +1,440 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Landing Page Architecture Guidelines
+
+Guidelines for creating modern, conversion-focused landing pages using section-based components and consistent branding.
+
+## **Section-Based Architecture**
+
+- **Modular sections** as independent React components
+- **Clear component boundaries** for each landing page area
+- **Consistent export pattern** through barrel exports
+- **Responsive design** with mobile-first approach
+
+## **Component Organization**
+
+```
+src/components/sections/
+├── hero.tsx          # Main hero section with CTA
+├── details.tsx       # Features/functionality overview
+├── subscription.tsx  # Pricing plans and packages
+├── benefits.tsx      # Social proof and testimonials
+├── contact.tsx       # Contact forms and information
+└── index.ts          # Barrel exports
+```
+
+### Barrel Exports Pattern
+```typescript
+// ✅ DO: Clean barrel exports
+// src/components/sections/index.ts
+export { Hero } from "./hero";
+export { Details } from "./details";
+export { Subscription } from "./subscription";
+export { Benefits } from "./benefits";
+export { Contact } from "./contact";
+
+// Usage in main page
+import {
+  Hero,
+  Details,
+  Subscription,
+  Benefits,
+  Contact,
+} from "@/components/sections";
+```
+
+## **Hero Section Pattern**
+
+```typescript
+// ✅ DO: Comprehensive hero section
+export function Hero() {
+  return (
+    <section className="relative py-20 px-4 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-blue-950 dark:via-slate-900 dark:to-cyan-950" />
+
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 text-blue-200 dark:text-blue-800 opacity-20">
+        <Waves className="h-32 w-32" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center">
+          {/* Main heading with brand colors */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
+            <span className="text-blue-600 dark:text-blue-400">Brand</span>
+            <span className="text-cyan-600 dark:text-cyan-400">Name</span>
+          </h1>
+
+          {/* Value proposition */}
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Clear value proposition in user's language
+          </p>
+
+          {/* Feature highlights */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+            {/* Feature cards with icons */}
+          </div>
+
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild size="lg">
+              <Link href="/dashboard">Primary CTA</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="#details">Secondary CTA</Link>
+            </Button>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="mt-16 text-center">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+              Social proof statement
+            </p>
+            <div className="flex justify-center items-center space-x-8">
+              {/* Trust metrics */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+## **Sticky Navigation Pattern**
+
+```typescript
+// ✅ DO: Sticky navbar with smooth scroll
+function Navbar() {
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Logo with brand colors */}
+        <Link href="/" className="flex items-center space-x-2">
+          <BrandIcon className="h-8 w-8 text-blue-600" />
+          <span className="text-xl font-bold">
+            <span className="text-blue-600">Brand</span>
+            <span className="text-cyan-600">Name</span>
+          </span>
+        </Link>
+
+        {/* Anchor links to sections */}
+        <div className="hidden md:flex items-center space-x-8">
+          <Link href="#details" className="nav-link">Funcționalități</Link>
+          <Link href="#subscription" className="nav-link">Prețuri</Link>
+          <Link href="#benefits" className="nav-link">Avantaje</Link>
+          <Link href="#contact" className="nav-link">Contact</Link>
+        </div>
+
+        {/* CTA and theme toggle */}
+        <div className="flex items-center space-x-4">
+          <ThemeToggle />
+          <Button asChild variant="outline" size="sm">
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
+          <Button asChild size="sm">
+            <Link href="#contact">Începe Gratuit</Link>
+          </Button>
+        </div>
+      </div>
+    </nav>
+  );
+}
+```
+
+## **Feature Showcase Pattern**
+
+```typescript
+// ✅ DO: Grid-based feature showcase
+export function Details() {
+  const features = [
+    {
+      icon: FeatureIcon,
+      title: "Feature Title",
+      description: "Clear benefit description",
+      details: [
+        "Specific capability 1",
+        "Specific capability 2", 
+        "Specific capability 3",
+      ],
+    },
+    // ... more features
+  ];
+
+  return (
+    <section id="details" className="py-20 px-4 bg-gray-50 dark:bg-slate-900">
+      <div className="max-w-7xl mx-auto">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Section Title
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Section description
+          </p>
+        </div>
+
+        {/* Features grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <Card key={index} className="feature-card">
+                <CardHeader className="pb-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  <CardDescription>{feature.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <ul className="space-y-2">
+                    {feature.details.map((detail, detailIndex) => (
+                      <li key={detailIndex} className="feature-detail">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2" />
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+## **Pricing Section Pattern**
+
+```typescript
+// ✅ DO: Pricing with popular plan highlight
+export function Subscription() {
+  const plans = [
+    {
+      name: "Plan Name",
+      description: "Plan description",
+      price: "299",
+      period: "lună",
+      apartments: "Capacity description",
+      popular: false, // or true for highlighted plan
+      features: ["Feature 1", "Feature 2", "Feature 3"],
+    },
+    // ... more plans
+  ];
+
+  return (
+    <section id="subscription" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {plans.map((plan, index) => (
+            <Card
+              key={index}
+              className={`relative border-2 ${
+                plan.popular
+                  ? "border-blue-500 shadow-xl scale-105"
+                  : "border-gray-200 dark:border-gray-700"
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-blue-500 text-white px-4 py-1">
+                    <Star className="w-3 h-3 mr-1" />
+                    Cel mai popular
+                  </Badge>
+                </div>
+              )}
+              {/* Plan content */}
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+## **Social Proof Pattern**
+
+```typescript
+// ✅ DO: Stats, testimonials, and trust indicators
+export function Benefits() {
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "Metric Title",
+      description: "Metric explanation",
+      stats: "+40%",
+      color: "from-green-500 to-emerald-500",
+    },
+    // ... more benefits
+  ];
+
+  const testimonials = [
+    {
+      name: "Customer Name",
+      role: "Customer Role",
+      content: "Testimonial content in quotes",
+      rating: 5,
+    },
+    // ... more testimonials
+  ];
+
+  return (
+    <section id="benefits" className="py-20 px-4 bg-gray-50 dark:bg-slate-900">
+      {/* Stats cards */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {benefits.map((benefit, index) => {
+          const Icon = benefit.icon;
+          return (
+            <Card key={index} className="stats-card">
+              <CardContent className="p-6">
+                <div className={`icon-container bg-gradient-to-br ${benefit.color}`}>
+                  <Icon className="h-6 w-6 text-white" />
+                </div>
+                <div className={`text-3xl font-bold bg-gradient-to-r ${benefit.color} bg-clip-text text-transparent mb-2`}>
+                  {benefit.stats}
+                </div>
+                <h3 className="title">{benefit.title}</h3>
+                <p className="description">{benefit.description}</p>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
+
+      {/* Testimonials */}
+      <div className="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="testimonial">
+            <blockquote>&ldquo;{testimonial.content}&rdquo;</blockquote>
+            <div className="author">{testimonial.name}</div>
+            <div className="role">{testimonial.role}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+```
+
+## **Contact Section Pattern**
+
+```typescript
+// ✅ DO: Comprehensive contact with multiple channels
+export function Contact() {
+  return (
+    <section id="contact" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Large contact form */}
+          <div className="lg:col-span-2">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl">Contact Form Title</CardTitle>
+                <CardDescription>Form description</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {/* Form fields */}
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact methods and info */}
+          <div className="space-y-6">
+            {/* Contact methods cards */}
+            {/* Support options */}
+            {/* Office locations */}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+## **Brand Color System**
+
+For AquaSync or similar blue/cyan brands:
+
+```css
+/* ✅ DO: Consistent brand colors */
+.text-brand-primary { @apply text-blue-600 dark:text-blue-400; }
+.text-brand-secondary { @apply text-cyan-600 dark:text-cyan-400; }
+.bg-brand-gradient { @apply bg-gradient-to-br from-blue-500 to-cyan-500; }
+.border-brand { @apply border-blue-500; }
+```
+
+## **Responsive Design Patterns**
+
+- **Mobile-first approach** with progressive enhancement
+- **Consistent breakpoints**: `md:`, `lg:`, `xl:`
+- **Flexible grids** that adapt to screen size
+- **Touch-friendly** button sizes on mobile
+
+```typescript
+// ✅ DO: Responsive grid patterns
+<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  {/* Responsive from 1 col to 4 cols */}
+</div>
+
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+  {/* Stack on mobile, row on desktop */}
+</div>
+```
+
+## **Performance Optimization**
+
+- **Code splitting** by section
+- **Image optimization** with next/image
+- **Lazy loading** for non-critical sections
+- **Minimal JavaScript** for purely informational sections
+
+## **SEO Considerations**
+
+- **Semantic HTML** structure
+- **Proper heading hierarchy** (h1 → h2 → h3)
+- **Alt text** for all images
+- **Meta tags** in page head
+- **Schema markup** for business information
+
+## **Accessibility**
+
+- **Skip navigation** links
+- **Keyboard navigation** support
+- **Focus management** for interactive elements
+- **ARIA labels** where appropriate
+- **Color contrast** compliance
+- **Screen reader** friendly content structure
+
+## **Common CSS Classes**
+
+```typescript
+// ✅ DO: Reusable component classes
+const componentClasses = {
+  section: "py-20 px-4",
+  sectionAlt: "py-20 px-4 bg-gray-50 dark:bg-slate-900",
+  container: "max-w-7xl mx-auto",
+  sectionHeader: "text-center mb-16",
+  sectionTitle: "text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4",
+  sectionDescription: "text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto",
+  featureCard: "border-0 shadow-lg hover:shadow-xl transition-shadow duration-300",
+  navLink: "text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors",
+};
+```
+
+## **Testing Strategy**
+
+- **Visual regression** testing for design consistency
+- **Responsive** testing across devices
+- **Performance** testing with Lighthouse
+- **Accessibility** testing with axe-core
+- **Cross-browser** compatibility testing
+
+Follow [Web Vitals optimization](mdc:https:/web.dev/vitals) and [Conversion optimization best practices](mdc:https:/cxl.com/blog/landing-page-optimization) for additional guidance.

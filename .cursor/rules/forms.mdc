@@ -1,6 +1,6 @@
 ---
-description: Creting, editing forms
-globs: 
+description: 
+globs: **form**,**input**
 alwaysApply: false
 ---
 # Forms with React Hook Form & ControlledInput
@@ -1040,3 +1040,344 @@ try {
 - **Use TypeScript generics** for type safety across all form fields
 - **Leverage FormFieldWrapper** for consistent styling and error handling across all form components
 - **Import SelectItem** from `@/components/ui/inputs/form-select` when using ControlledSelect
+
+# Form Component Guidelines
+
+Guidelines for creating consistent, reusable form components using React Hook Form, Zod validation, and TypeScript generics.
+
+## **Architecture Pattern**
+
+- **Use FormProvider context** instead of passing `control` prop explicitly
+- **Extend base component props** for maximum flexibility  
+- **TypeScript generics** for type-safe form field paths
+- **Consistent naming** with `Controlled` prefix for form components
+
+## **Component Structure**
+
+```typescript
+// ✅ DO: Proper form component structure
+import { useFormContext } from "react-hook-form";
+import type { FieldValues, Path } from "react-hook-form";
+
+type ControlledInputProps<T extends FieldValues> = {
+  name: Path<T>;
+  label: string;
+  placeholder?: string;
+  required?: boolean;
+  helperText?: string;
+} & Omit<React.ComponentProps<typeof Input>, "name">;
+
+export function ControlledInput<T extends FieldValues>({
+  name,
+  label,
+  placeholder,
+  required,
+  helperText,
+  ...props
+}: ControlledInputProps<T>) {
+  const { control } = useFormContext<T>();
+  
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormFieldWrapper
+          label={label}
+          required={required}
+          helperText={helperText}
+        >
+          <Input
+            placeholder={placeholder}
+            {...field}
+            {...props}
+          />
+        </FormFieldWrapper>
+      )}
+    />
+  );
+}
+```
+
+## **FormProvider Integration**
+
+- **Always wrap forms** in FormProvider for context access
+- **Use useFormContext()** instead of passing control prop
+- **Simplify component APIs** by removing control requirement
+
+```typescript
+// ✅ DO: Use FormProvider pattern
+function MyForm() {
+  const form = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  return (
+    <FormProvider {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)}>
+        <ControlledInput
+          name="email"
+          label="Email"
+          placeholder="Enter email"
+          required
+        />
+        <ControlledPassword
+          name="password"
+          label="Password"
+          required
+        />
+      </form>
+    </FormProvider>
+  );
+}
+
+// ❌ DON'T: Pass control explicitly
+<ControlledInput
+  control={control}
+  name="email"
+  // ...props
+/>
+```
+
+## **Component Extensibility**
+
+- **Extend base component props** using Omit pattern
+- **Spread additional props** to underlying components
+- **Avoid prop conflicts** by omitting conflicting properties
+
+```typescript
+// ✅ DO: Extend base props properly
+type ControlledSelectProps<T extends FieldValues> = {
+  name: Path<T>;
+  label: string;
+  placeholder?: string;
+  options: Array<{ value: string; label: string }>;
+  required?: boolean;
+} & Omit<React.ComponentProps<typeof Select>, "name" | "onValueChange">;
+
+// ✅ DO: Spread additional props
+<Select
+  placeholder={placeholder}
+  {...props} // All additional props passed through
+>
+```
+
+## **Specialized Form Components**
+
+### Password Input with Toggle
+```typescript
+// ✅ DO: Password component with show/hide functionality
+export function ControlledPassword<T extends FieldValues>({
+  name,
+  label,
+  ...props
+}: ControlledPasswordProps<T>) {
+  const [showPassword, setShowPassword] = useState(false);
+  
+  return (
+    <FormField
+      control={control}
+      name={name}
+      render={({ field }) => (
+        <FormFieldWrapper label={label}>
+          <div className="relative">
+            <Input
+              type={showPassword ? "text" : "password"}
+              {...field}
+              {...props}
+            />
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="absolute right-0 top-0 h-full px-3"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <EyeOff /> : <Eye />}
+            </Button>
+          </div>
+        </FormFieldWrapper>
+      )}
+    />
+  );
+}
+```
+
+### Select with Options
+```typescript
+// ✅ DO: Select component with options array
+type ControlledSelectProps<T extends FieldValues> = {
+  options: Array<{ value: string; label: string }>;
+  placeholder?: string;
+} & BaseControlledProps<T> 
+  & Omit<React.ComponentProps<typeof Select>, "name" | "onValueChange">;
+
+export function ControlledSelect<T extends FieldValues>({
+  options,
+  placeholder = "Select an option",
+  ...props
+}: ControlledSelectProps<T>) {
+  return (
+    <FormField
+      render={({ field }) => (
+        <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectTrigger>
+            <SelectValue placeholder={placeholder} />
+          </SelectTrigger>
+          <SelectContent>
+            {options.map((option) => (
+              <SelectItem
+                key={option.value}
+                value={option.value}
+              >
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      )}
+    />
+  );
+}
+```
+
+## **Validation Integration**
+
+- **Use Zod schemas** for validation
+- **Infer types** from Zod schemas
+- **Consistent error handling** through FormField
+
+```typescript
+// ✅ DO: Zod schema with type inference
+const createUserSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  email: z.string().email("Invalid email format"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+});
+
+type CreateUserFormData = z.infer<typeof createUserSchema>;
+
+// ✅ DO: Use resolver with schema
+const form = useForm<CreateUserFormData>({
+  resolver: zodResolver(createUserSchema),
+  defaultValues: {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  },
+});
+```
+
+## **Component Organization**
+
+```
+src/components/forms/
+├── controlled-input.tsx
+├── controlled-textarea.tsx
+├── controlled-password.tsx
+├── controlled-select.tsx
+├── controlled-checkbox.tsx
+├── form-field-wrapper.tsx
+└── index.ts
+```
+
+- **Separate files** for each form component
+- **Barrel exports** from index.ts
+- **Consistent naming** with `controlled-` prefix
+- **Shared wrapper** component for common layout
+
+## **Common Patterns**
+
+### FormFieldWrapper Component
+```typescript
+// ✅ DO: Reusable wrapper for consistent layout
+type FormFieldWrapperProps = {
+  label: string;
+  required?: boolean;
+  helperText?: string;
+  children: React.ReactNode;
+};
+
+export function FormFieldWrapper({
+  label,
+  required,
+  helperText,
+  children,
+}: FormFieldWrapperProps) {
+  return (
+    <FormItem>
+      <FormLabel>
+        {label}
+        {required && <span className="text-red-500 ml-1">*</span>}
+      </FormLabel>
+      <FormControl>{children}</FormControl>
+      {helperText && <FormDescription>{helperText}</FormDescription>}
+      <FormMessage />
+    </FormItem>
+  );
+}
+```
+
+### Base Props Type
+```typescript
+// ✅ DO: Shared base props for consistency
+type BaseControlledProps<T extends FieldValues> = {
+  name: Path<T>;
+  label: string;
+  required?: boolean;
+  helperText?: string;
+};
+```
+
+## **Testing Patterns**
+
+- **Test form validation** with invalid data
+- **Test form submission** with valid data
+- **Test component props** pass through correctly
+- **Mock form context** for isolated testing
+
+```typescript
+// ✅ DO: Test form components with context
+const TestWrapper = ({ children }: { children: React.ReactNode }) => {
+  const form = useForm();
+  return <FormProvider {...form}>{children}</FormProvider>;
+};
+
+test("renders input with label", () => {
+  render(
+    <TestWrapper>
+      <ControlledInput name="email" label="Email" />
+    </TestWrapper>
+  );
+  expect(screen.getByLabelText("Email")).toBeInTheDocument();
+});
+```
+
+## **Performance Considerations**
+
+- **Minimize re-renders** by using useFormContext efficiently
+- **Lazy load** heavy form components when needed
+- **Debounce validation** for expensive validation operations
+- **Memoize options arrays** to prevent unnecessary re-renders
+
+## **Accessibility**
+
+- **Proper labels** for all form controls
+- **ARIA attributes** for complex components
+- **Error announcements** for screen readers
+- **Keyboard navigation** support
+- **Required field indicators** for assistive technology
+
+## **Migration Guide**
+
+When converting existing forms to this pattern:
+
+1. **Wrap in FormProvider** instead of passing control
+2. **Remove control props** from component calls
+3. **Add prop spreading** to component definitions
+4. **Update TypeScript types** to extend base component props
+5. **Test thoroughly** to ensure props pass through correctly
+
+Follow [React Hook Form best practices](mdc:https:/react-hook-form.com/get-started) and [Zod validation patterns](mdc:https:/zod.dev) for additional guidance.

@@ -1,0 +1,358 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Theme Handling Guidelines
+
+Guidelines for implementing dark/light mode themes with SSR-safe toggling and localStorage persistence.
+
+## **Client-Side Theme Toggle Pattern**
+
+```typescript
+// ✅ DO: SSR-safe theme toggle component
+"use client";
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
+
+export function ThemeToggle() {
+  const [theme, setTheme] = React.useState<"light" | "dark">("light");
+
+  React.useEffect(() => {
+    // Check localStorage first, then system preference
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+    setTheme(initialTheme);
+
+    // Apply theme to document
+    if (initialTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+
+    // Persist to localStorage
+    localStorage.setItem("theme", newTheme);
+
+    // Apply to document
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  return (
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={toggleTheme}
+      className="h-8 w-8 p-0"
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+    >
+      {theme === "light" ? (
+        <Moon className="h-4 w-4" />
+      ) : (
+        <Sun className="h-4 w-4" />
+      )}
+    </Button>
+  );
+}
+```
+
+## **Key Requirements**
+
+- **"use client" directive** required for localStorage and window access
+- **localStorage persistence** to remember user preference
+- **System preference detection** as fallback for first visit
+- **Document class manipulation** to apply theme immediately
+- **Accessible button** with proper aria-label
+
+## **Theme-Aware Color System**
+
+```typescript
+// ✅ DO: Consistent dark mode color patterns
+const colorPatterns = {
+  // Background variations
+  background: "bg-white dark:bg-slate-900",
+  backgroundAlt: "bg-gray-50 dark:bg-slate-900",
+  backgroundCard: "bg-white dark:bg-slate-800",
+  
+  // Text variations
+  textPrimary: "text-gray-900 dark:text-white",
+  textSecondary: "text-gray-600 dark:text-gray-300",
+  textMuted: "text-gray-500 dark:text-gray-400",
+  
+  // Border variations
+  border: "border-gray-200 dark:border-gray-700",
+  borderLight: "border-gray-100 dark:border-gray-800",
+  
+  // Brand colors (maintain contrast in both modes)
+  brandPrimary: "text-blue-600 dark:text-blue-400",
+  brandSecondary: "text-cyan-600 dark:text-cyan-400",
+  
+  // Decorative elements
+  decorative: "text-blue-200 dark:text-blue-800",
+  decorativeAlt: "text-cyan-200 dark:text-cyan-800",
+};
+```
+
+## **Gradient Patterns**
+
+```typescript
+// ✅ DO: Dark mode compatible gradients
+const gradientPatterns = {
+  // Background gradients
+  heroBg: "bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-blue-950 dark:via-slate-900 dark:to-cyan-950",
+  cardBg: "bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm",
+  
+  // Brand gradients (work in both modes)
+  brandGradient: "bg-gradient-to-br from-blue-500 to-cyan-500",
+  textGradient: "bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent",
+  
+  // CTA gradients
+  ctaGradient: "bg-gradient-to-r from-blue-600 to-cyan-600",
+};
+```
+
+## **Navigation Theme Integration**
+
+```typescript
+// ✅ DO: Theme-aware navigation
+function Navbar() {
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Logo maintains brand colors */}
+        <Link href="/" className="flex items-center space-x-2">
+          <BrandIcon className="h-8 w-8 text-blue-600" />
+          <span className="text-xl font-bold">
+            <span className="text-blue-600">Brand</span>
+            <span className="text-cyan-600">Name</span>
+          </span>
+        </Link>
+
+        {/* Navigation links adapt to theme */}
+        <div className="hidden md:flex items-center space-x-8">
+          <Link href="#section" className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">
+            Section
+          </Link>
+        </div>
+
+        {/* Theme toggle in navigation */}
+        <div className="flex items-center space-x-4">
+          <ThemeToggle />
+          <Button asChild variant="outline" size="sm">
+            <Link href="/dashboard">Dashboard</Link>
+          </Button>
+        </div>
+      </div>
+    </nav>
+  );
+}
+```
+
+## **SSR Considerations**
+
+- **Client-only components** must use "use client" directive
+- **No theme state on server** - let client handle initialization
+- **Avoid hydration mismatches** by not rendering theme-dependent content on server
+- **Progressive enhancement** - start with light theme, enhance with saved preference
+
+## **System Preference Detection**
+
+```typescript
+// ✅ DO: Respect user's system preference
+React.useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  
+  // Only check system preference if no saved preference
+  if (!savedTheme) {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const systemTheme = prefersDark ? "dark" : "light";
+    setTheme(systemTheme);
+    applyTheme(systemTheme);
+  } else {
+    setTheme(savedTheme as "light" | "dark");
+    applyTheme(savedTheme as "light" | "dark");
+  }
+}, []);
+
+// ✅ DO: Listen for system preference changes
+React.useEffect(() => {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  
+  const handleChange = (e: MediaQueryListEvent) => {
+    // Only respond if no manual preference is saved
+    if (!localStorage.getItem("theme")) {
+      const newTheme = e.matches ? "dark" : "light";
+      setTheme(newTheme);
+      applyTheme(newTheme);
+    }
+  };
+  
+  mediaQuery.addEventListener("change", handleChange);
+  return () => mediaQuery.removeEventListener("change", handleChange);
+}, []);
+```
+
+## **Theme Context Pattern** (Advanced)
+
+For complex applications with multiple theme-aware components:
+
+```typescript
+// ✅ DO: Theme context for complex apps
+"use client";
+
+type ThemeContextType = {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+  systemPreference: "light" | "dark";
+};
+
+const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = React.useState<"light" | "dark">("light");
+  const [systemPreference, setSystemPreference] = React.useState<"light" | "dark">("light");
+
+  // ... implementation
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme, systemPreference }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+export function useTheme() {
+  const context = React.useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+}
+```
+
+## **CSS Variables Alternative** (Optional)
+
+For dynamic theme values:
+
+```css
+/* ✅ DO: CSS custom properties for themes */
+:root {
+  --color-background: 255 255 255;
+  --color-foreground: 15 23 42;
+  --color-primary: 37 99 235;
+}
+
+.dark {
+  --color-background: 15 23 42;
+  --color-foreground: 248 250 252;
+  --color-primary: 96 165 250;
+}
+
+.bg-background {
+  background-color: rgb(var(--color-background));
+}
+```
+
+## **Icon Patterns**
+
+```typescript
+// ✅ DO: Theme-appropriate icons
+const ThemeIcon = ({ theme }: { theme: "light" | "dark" }) => {
+  return theme === "light" ? (
+    <Moon className="h-4 w-4" />
+  ) : (
+    <Sun className="h-4 w-4" />
+  );
+};
+
+// ✅ DO: Icon colors that work in both themes
+<Icon className="text-gray-600 dark:text-gray-400" />
+<Icon className="text-blue-600 dark:text-blue-400" />
+```
+
+## **Testing Theme Components**
+
+```typescript
+// ✅ DO: Test theme toggle functionality
+test("toggles theme and updates localStorage", () => {
+  render(<ThemeToggle />);
+  
+  const toggleButton = screen.getByRole("button");
+  
+  // Test initial state
+  expect(toggleButton).toHaveAttribute("aria-label", expect.stringContaining("dark"));
+  
+  // Test toggle
+  fireEvent.click(toggleButton);
+  expect(localStorage.getItem("theme")).toBe("dark");
+  expect(document.documentElement).toHaveClass("dark");
+});
+
+// ✅ DO: Test with different system preferences
+test("respects system preference when no saved theme", () => {
+  // Mock matchMedia
+  Object.defineProperty(window, "matchMedia", {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches: query === "(prefers-color-scheme: dark)",
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
+  
+  render(<ThemeToggle />);
+  // Assert dark theme is set based on system preference
+});
+```
+
+## **Performance Considerations**
+
+- **Minimize theme calculations** - cache theme state
+- **Debounce rapid toggles** if needed
+- **Use CSS transitions** for smooth theme changes
+- **Optimize re-renders** with proper React optimization
+
+## **Accessibility**
+
+- **Proper ARIA labels** describing current and next state
+- **Keyboard support** for theme toggle
+- **High contrast** mode considerations
+- **Reduced motion** respect for theme transitions
+
+## **Common Pitfalls**
+
+- ❌ **Don't** render theme toggle on server (hydration mismatch)
+- ❌ **Don't** forget "use client" directive
+- ❌ **Don't** ignore system preference changes
+- ❌ **Don't** hardcode theme values in CSS
+- ❌ **Don't** forget to persist theme choice
+
+## **Migration Guide**
+
+When adding theme support to existing components:
+
+1. **Add dark mode classes** to all color-related styles
+2. **Test theme toggle** in all components
+3. **Update gradients** to work in both modes
+4. **Check contrast ratios** for accessibility
+5. **Test localStorage persistence** functionality
+
+Follow [Tailwind CSS dark mode guide](mdc:https:/tailwindcss.com/docs/dark-mode) and [Next.js theme switching patterns](mdc:https:/nextjs.org/docs/advanced-features/customizing-postcss-config) for additional guidance.
