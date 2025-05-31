@@ -1,7 +1,7 @@
 # Task ID: 13
 # Title: API-uri Citiri Apă
 # Status: pending
-# Dependencies: None
+# Dependencies: 11
 # Priority: high
 # Description: Implementarea API-urilor pentru gestionarea citirilor de apă
 # Details:

@@ -1,7 +1,7 @@
 # Task ID: 26
 # Title: Sistem de Predicții
 # Status: pending
-# Dependencies: None
+# Dependencies: 25
 # Priority: low
 # Description: Implementarea algoritmilor de machine learning pentru predicții
 # Details:

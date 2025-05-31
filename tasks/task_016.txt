@@ -1,7 +1,7 @@
 # Task ID: 16
 # Title: Sistem de Detectare Anomalii
 # Status: pending
-# Dependencies: None
+# Dependencies: 13
 # Priority: medium
 # Description: Implementarea algoritmilor pentru detectarea citirilor anormale
 # Details:

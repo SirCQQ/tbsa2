@@ -1,7 +1,7 @@
 # Task ID: 32
 # Title: Design System
 # Status: pending
-# Dependencies: None
+# Dependencies: 1
 # Priority: medium
 # Description: Dezvoltarea unui design system consistent
 # Details:

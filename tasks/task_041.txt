@@ -1,7 +1,7 @@
 # Task ID: 41
 # Title: Documentație Tehnică
 # Status: pending
-# Dependencies: None
+# Dependencies: 17
 # Priority: low
 # Description: Crearea documentației pentru dezvoltatori
 # Details:

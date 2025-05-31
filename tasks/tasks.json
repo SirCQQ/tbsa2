@@ -13,7 +13,7 @@
           "id": 1,
           "title": "Instalare și configurare TypeScript",
           "description": "Setup TypeScript cu configurări stricte pentru proiect",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 4
         },
@@ -21,7 +21,7 @@
           "id": 2,
           "title": "Setup Tailwind CSS și shadcn/ui",
           "description": "Configurare Tailwind CSS și instalare componentelor shadcn/ui",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 6
         },
@@ -29,7 +29,7 @@
           "id": 3,
           "title": "Configurare ESLint și Prettier",
           "description": "Setup linting și formatare automată a codului",
-          "status": "pending",
+          "status": "done",
           "priority": "medium",
           "complexity": 4
         },
@@ -37,7 +37,7 @@
           "id": 4,
           "title": "Setup Husky pentru git hooks",
           "description": "Configurare pre-commit hooks pentru validare cod",
-          "status": "pending",
+          "status": "done",
           "priority": "medium",
           "complexity": 5
         },
@@ -45,14 +45,14 @@
           "id": 5,
           "title": "Configurare structură de foldere",
           "description": "Organizarea structurii de foldere conform best practices",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 3
         }
       ],
       "dependencies": [],
       "priority": "high",
-      "status": "pending"
+      "status": "done"
     },
     {
       "id": 2,
@@ -65,7 +65,7 @@
           "id": 1,
           "title": "Instalare și configurare Prisma",
           "description": "Setup Prisma CLI și configurare inițială",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 3
         },
@@ -73,7 +73,7 @@
           "id": 2,
           "title": "Crearea schemei complete cu toate modelele",
           "description": "Definirea tuturor modelelor Prisma pentru aplicație",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 4
         },
@@ -81,7 +81,7 @@
           "id": 3,
           "title": "Setup conexiune PostgreSQL",
           "description": "Configurarea conexiunii la baza de date PostgreSQL",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 3
         },
@@ -89,7 +89,7 @@
           "id": 4,
           "title": "Crearea și rularea migrărilor inițiale",
           "description": "Generarea și aplicarea migrărilor pentru schema inițială",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 4
         },
@@ -97,14 +97,14 @@
           "id": 5,
           "title": "Setup Prisma Client",
           "description": "Configurarea Prisma Client pentru utilizare în aplicație",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 5
         }
       ],
       "dependencies": [1],
       "priority": "high",
-      "status": "pending"
+      "status": "done"
     },
     {
       "id": 3,
@@ -117,7 +117,7 @@
           "id": 1,
           "title": "Setup NextAuth.js cu provider credentials",
           "description": "Configurarea NextAuth.js pentru autentificare cu email/parolă",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 6
         },
@@ -125,7 +125,7 @@
           "id": 2,
           "title": "Configurare sesiuni și middleware",
           "description": "Setup middleware pentru protejarea rutelor și gestionarea sesiunilor",
-          "status": "pending",
+          "status": "done",
           "priority": "high",
           "complexity": 7
         },
@@ -156,7 +156,7 @@
       ],
       "dependencies": [2],
       "priority": "high",
-      "status": "pending"
+      "status": "in-progress"
     },
     {
       "id": 4,

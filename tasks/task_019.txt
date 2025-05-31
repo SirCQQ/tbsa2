@@ -1,7 +1,7 @@
 # Task ID: 19
 # Title: Export și Distribuire
 # Status: pending
-# Dependencies: None
+# Dependencies: 17
 # Priority: high
 # Description: Implementarea sistemelor de export și distribuire a listelor
 # Details:

@@ -1,7 +1,7 @@
 # Task ID: 35
 # Title: Unit Testing
 # Status: pending
-# Dependencies: None
+# Dependencies: 17, 13
 # Priority: medium
 # Description: Implementarea testelor unitare pentru funcționalitățile critice
 # Details:

@@ -1,7 +1,7 @@
 # Task ID: 34
 # Title: Componente Complexe
 # Status: pending
-# Dependencies: None
+# Dependencies: 32
 # Priority: medium
 # Description: Dezvoltarea componentelor UI complexe
 # Details:

@@ -58,15 +58,16 @@ enum NotificationType {
 
 // Modele pentru utilizatori și permisiuni
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  password  String
-  roleId    String
-  role      Role     @relation(fields: [roleId], references: [id])
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id             String    @id @default(uuid())
+  email          String    @unique
+  name           String?
+  hashedPassword String?
+  emailVerified  DateTime?
+  isActive       Boolean   @default(false)
+  roleId         String
+  role           Role      @relation(fields: [roleId], references: [id])
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 
   // Relații
   administeredBuildings Building[]        @relation("Administrator")
@@ -76,10 +77,12 @@ model User {
   notifications         Notification[]
   userPermissions       UserPermission[]
   createdPermissions    UserPermission[]  @relation("PermissionCreator")
+
+  @@index([roleId])
 }
 
 model Role {
-  id          String   @id @default(cuid())
+  id          String   @id @default(uuid())
   name        String   @unique
   description String?
   isSystem    Boolean  @default(false)
@@ -92,7 +95,7 @@ model Role {
 }
 
 model Permission {
-  id          String       @id @default(cuid())
+  id          String       @id @default(uuid())
   resource    ResourceType
   action      ActionType
   description String // Descriere clară a permisiunii
@@ -132,7 +135,7 @@ model UserPermission {
 
 // Modele pentru asociații și blocuri
 model Association {
-  id         String   @id @default(cuid())
+  id         String   @id @default(uuid())
   name       String
   address    String
   fiscalCode String?
@@ -144,7 +147,7 @@ model Association {
 }
 
 model Building {
-  id            String      @id @default(cuid())
+  id            String      @id @default(uuid())
   name          String
   address       String
   floors        Int
@@ -160,7 +163,7 @@ model Building {
 }
 
 model Apartment {
-  id         String   @id @default(cuid())
+  id         String   @id @default(uuid())
   number     String
   floor      Int
   rooms      Int?
@@ -199,7 +202,7 @@ model ApartmentMember {
 
 // Modele pentru citiri apă și plăți
 model WaterReading {
-  id          String    @id @default(cuid())
+  id          String    @id @default(uuid())
   apartmentId String
   apartment   Apartment @relation(fields: [apartmentId], references: [id])
   userId      String
@@ -213,7 +216,7 @@ model WaterReading {
 }
 
 model PaymentList {
-  id         String            @id @default(cuid())
+  id         String            @id @default(uuid())
   buildingId String
   building   Building          @relation(fields: [buildingId], references: [id])
   month      Int
@@ -229,7 +232,7 @@ model PaymentList {
 }
 
 model PaymentItem {
-  id                   String      @id @default(cuid())
+  id                   String      @id @default(uuid())
   paymentListId        String
   paymentList          PaymentList @relation(fields: [paymentListId], references: [id])
   apartmentId          String
@@ -248,7 +251,7 @@ model PaymentItem {
 
 // Model pentru notificări
 model Notification {
-  id        String           @id @default(cuid())
+  id        String           @id @default(uuid())
   userId    String
   user      User             @relation(fields: [userId], references: [id])
   type      NotificationType
@@ -260,7 +263,7 @@ model Notification {
 
 // Model pentru audit log
 model AuditLog {
-  id         String   @id @default(cuid())
+  id         String   @id @default(uuid())
   userId     String
   action     String
   resource   String
@@ -269,4 +272,12 @@ model AuditLog {
   ipAddress  String?
   userAgent  String?
   createdAt  DateTime @default(now())
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
 }

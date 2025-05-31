@@ -1,7 +1,7 @@
 # Task ID: 42
 # Title: Documentație Utilizatori
 # Status: pending
-# Dependencies: None
+# Dependencies: 21, 22
 # Priority: low
 # Description: Crearea documentației pentru utilizatorii finali
 # Details:

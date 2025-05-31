@@ -1,7 +1,7 @@
 # Task ID: 44
 # Title: API Public
 # Status: pending
-# Dependencies: None
+# Dependencies: 17, 13
 # Priority: low
 # Description: Dezvoltarea API-ului public pentru integrări externe
 # Details:

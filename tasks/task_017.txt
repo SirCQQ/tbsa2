@@ -1,7 +1,7 @@
 # Task ID: 17
 # Title: API-uri Liste de Plată
 # Status: pending
-# Dependencies: None
+# Dependencies: 13
 # Priority: high
 # Description: Implementarea logicii pentru generarea și gestionarea listelor de plată
 # Details:

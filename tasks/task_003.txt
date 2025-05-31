@@ -1,7 +1,7 @@
 # Task ID: 3
 # Title: Configurare Autentificare
-# Status: pending
-# Dependencies: None
+# Status: in-progress
+# Dependencies: 2
 # Priority: high
 # Description: Implementarea sistemului de autentificare cu NextAuth.js
 # Details:
@@ -11,13 +11,13 @@
 
 
 # Subtasks:
-## 1. Setup NextAuth.js cu provider credentials [pending]
+## 1. Setup NextAuth.js cu provider credentials [done]
 ### Dependencies: None
 ### Description: Configurarea NextAuth.js pentru autentificare cu email/parolă
 ### Details:
 
 
-## 2. Configurare sesiuni și middleware [pending]
+## 2. Configurare sesiuni și middleware [done]
 ### Dependencies: None
 ### Description: Setup middleware pentru protejarea rutelor și gestionarea sesiunilor
 ### Details:

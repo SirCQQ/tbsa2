@@ -1,7 +1,7 @@
 # Task ID: 5
 # Title: Interfață Gestionare Permisiuni
 # Status: pending
-# Dependencies: None
+# Dependencies: 4
 # Priority: high
 # Description: Dezvoltarea interfețelor pentru Super Admin să gestioneze permisiuni
 # Details:

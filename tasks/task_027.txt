@@ -1,7 +1,7 @@
 # Task ID: 27
 # Title: Interfață Rapoarte
 # Status: pending
-# Dependencies: None
+# Dependencies: 24
 # Priority: medium
 # Description: Dezvoltarea interfețelor pentru generarea și vizualizarea rapoartelor
 # Details:

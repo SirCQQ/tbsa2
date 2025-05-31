@@ -1,7 +1,7 @@
 # Task ID: 15
 # Title: Interfață Proprietar pentru Citiri
 # Status: pending
-# Dependencies: None
+# Dependencies: 13
 # Priority: high
 # Description: Dezvoltarea interfețelor pentru proprietari să transmită citirile
 # Details:

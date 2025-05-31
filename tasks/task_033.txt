@@ -1,7 +1,7 @@
 # Task ID: 33
 # Title: Layout-uri Responsive
 # Status: pending
-# Dependencies: None
+# Dependencies: 32
 # Priority: medium
 # Description: Implementarea design-ului responsive pentru toate dispozitivele
 # Details:

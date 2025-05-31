@@ -1,7 +1,7 @@
 # Task ID: 4
 # Title: Implementare Sistem de Permisiuni
 # Status: pending
-# Dependencies: None
+# Dependencies: 3
 # Priority: high
 # Description: Dezvoltarea sistemului granular de permisiuni bazat pe resurse și acțiuni
 # Details:

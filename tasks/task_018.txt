@@ -1,7 +1,7 @@
 # Task ID: 18
 # Title: Generator Liste de Plată
 # Status: pending
-# Dependencies: None
+# Dependencies: 17
 # Priority: high
 # Description: Dezvoltarea sistemului automat de generare a listelor de plată
 # Details:

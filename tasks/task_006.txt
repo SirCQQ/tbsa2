@@ -1,7 +1,7 @@
 # Task ID: 6
 # Title: Seed-uri și Date Inițiale
 # Status: pending
-# Dependencies: None
+# Dependencies: 4
 # Priority: medium
 # Description: Popularea bazei de date cu roluri, permisiuni și date inițiale
 # Details:

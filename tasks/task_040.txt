@@ -1,7 +1,7 @@
 # Task ID: 40
 # Title: Backup și Securitate
 # Status: pending
-# Dependencies: None
+# Dependencies: 38
 # Priority: high
 # Description: Implementarea măsurilor de securitate și backup
 # Details:

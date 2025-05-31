@@ -1,7 +1,7 @@
 # Task ID: 43
 # Title: Sistem de Onboarding
 # Status: pending
-# Dependencies: None
+# Dependencies: 21, 22
 # Priority: low
 # Description: Implementarea sistemului de onboarding pentru noi utilizatori
 # Details:

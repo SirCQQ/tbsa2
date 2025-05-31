@@ -1,7 +1,7 @@
 # Task ID: 9
 # Title: CRUD Apartamente
 # Status: pending
-# Dependencies: None
+# Dependencies: 8
 # Priority: high
 # Description: Implementarea funcționalităților pentru gestionarea apartamentelor
 # Details:

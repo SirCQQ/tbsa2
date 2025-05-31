@@ -12,7 +12,6 @@ Guidelines for implementing and using the JWT-based permissions system that stor
 - **Format:** `resource:action:scope`
 - **Resources:** `buildings`, `apartments`, `users`, `water_readings`, `invite_codes`, `roles`, `admin_grant`
 - **Actions:** `read`, `create`, `update`, `delete`
-- **Scopes:** `all`, `own`, `building`, `null`
 
 ## **Available Permission Functions**
 

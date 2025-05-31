@@ -1,7 +1,7 @@
 # Task ID: 39
 # Title: Monitoring și Logging
 # Status: pending
-# Dependencies: None
+# Dependencies: 38
 # Priority: medium
 # Description: Implementarea sistemelor de monitorizare
 # Details:

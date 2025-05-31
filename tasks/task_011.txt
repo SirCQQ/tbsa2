@@ -1,7 +1,7 @@
 # Task ID: 11
 # Title: Asocierea Proprietarilor cu Apartamentele
 # Status: pending
-# Dependencies: None
+# Dependencies: 10, 9
 # Priority: high
 # Description: Implementarea sistemului de asociere proprietari-apartamente
 # Details:

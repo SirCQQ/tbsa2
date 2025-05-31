@@ -1,7 +1,7 @@
 # Task ID: 30
 # Title: Notificări In-App
 # Status: pending
-# Dependencies: None
+# Dependencies: 28
 # Priority: medium
 # Description: Implementarea notificărilor în aplicație
 # Details:

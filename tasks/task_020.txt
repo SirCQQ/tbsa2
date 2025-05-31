@@ -1,7 +1,7 @@
 # Task ID: 20
 # Title: Interfață Vizualizare Liste
 # Status: pending
-# Dependencies: None
+# Dependencies: 17
 # Priority: medium
 # Description: Dezvoltarea interfețelor pentru vizualizarea listelor de plată
 # Details:

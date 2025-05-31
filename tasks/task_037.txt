@@ -1,7 +1,7 @@
 # Task ID: 37
 # Title: E2E Testing
 # Status: pending
-# Dependencies: None
+# Dependencies: 21, 22
 # Priority: low
 # Description: Implementarea testelor end-to-end cu Playwright
 # Details:

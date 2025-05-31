@@ -1,7 +1,7 @@
 # Task ID: 23
 # Title: Dashboard Super Admin
 # Status: pending
-# Dependencies: None
+# Dependencies: 5
 # Priority: medium
 # Description: Dezvoltarea dashboard-ului pentru Super Admin
 # Details:

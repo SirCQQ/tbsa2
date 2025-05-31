@@ -1,7 +1,7 @@
 # Task ID: 21
 # Title: Dashboard Administrator
 # Status: pending
-# Dependencies: None
+# Dependencies: 17, 13
 # Priority: high
 # Description: Dezvoltarea dashboard-ului principal pentru administratori
 # Details:

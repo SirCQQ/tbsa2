@@ -1,7 +1,7 @@
 # Task ID: 38
 # Title: Setup CI/CD
 # Status: pending
-# Dependencies: None
+# Dependencies: 1
 # Priority: medium
 # Description: Configurarea pipeline-ului de deployment automat
 # Details:

@@ -1,7 +1,7 @@
 # Task ID: 31
 # Title: Notificări Automate
 # Status: pending
-# Dependencies: None
+# Dependencies: 29, 16
 # Priority: medium
 # Description: Implementarea sistemului de notificări automate
 # Details:

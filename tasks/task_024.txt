@@ -1,7 +1,7 @@
 # Task ID: 24
 # Title: Rapoarte de Bază
 # Status: pending
-# Dependencies: None
+# Dependencies: 17, 13
 # Priority: medium
 # Description: Implementarea rapoartelor esențiale pentru administratori
 # Details:

@@ -1,7 +1,7 @@
 # Task ID: 8
 # Title: CRUD Blocuri
 # Status: pending
-# Dependencies: None
+# Dependencies: 7
 # Priority: high
 # Description: Implementarea funcționalităților pentru gestionarea blocurilor
 # Details:

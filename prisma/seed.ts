@@ -266,32 +266,25 @@ async function main() {
   // 2. Crearea rolurilor
   console.log("👥 Creating roles...");
 
+  // Create default roles
+  console.log("👥 Creating default roles...");
+
+  const userRole = await prisma.role.upsert({
+    where: { name: "user" },
+    update: {},
+    create: {
+      name: "user",
+      description: "Regular user role",
+      isSystem: true,
+    },
+  });
+
   const superAdminRole = await prisma.role.upsert({
-    where: { name: "SUPER_ADMIN" },
+    where: { name: "super_admin" },
     update: {},
     create: {
-      name: "SUPER_ADMIN",
-      description: "Super Administrator cu acces complet la sistem",
-      isSystem: true,
-    },
-  });
-
-  const adminRole = await prisma.role.upsert({
-    where: { name: "ADMIN" },
-    update: {},
-    create: {
-      name: "ADMIN",
-      description: "Administrator asociație cu acces la gestionarea blocurilor",
-      isSystem: true,
-    },
-  });
-
-  const ownerRole = await prisma.role.upsert({
-    where: { name: "OWNER" },
-    update: {},
-    create: {
-      name: "OWNER",
-      description: "Proprietar de apartament cu acces limitat",
+      name: "super_admin",
+      description: "Super administrator role",
       isSystem: true,
     },
   });
@@ -397,41 +390,13 @@ async function main() {
     await prisma.rolePermission.upsert({
       where: {
         roleId_permissionId: {
-          roleId: adminRole.id,
+          roleId: superAdminRole.id,
           permissionId: permission.id,
         },
       },
       update: {},
       create: {
-        roleId: adminRole.id,
-        permissionId: permission.id,
-      },
-    });
-  }
-
-  // Owner - permisiuni limitate
-  const ownerPermissions = await prisma.permission.findMany({
-    where: {
-      OR: [
-        { resource: ResourceType.WATER_READINGS, action: ActionType.CREATE },
-        { resource: ResourceType.WATER_READINGS, action: ActionType.READ },
-        { resource: ResourceType.PAYMENT_LISTS, action: ActionType.READ },
-        { resource: ResourceType.NOTIFICATIONS, action: ActionType.READ },
-      ],
-    },
-  });
-
-  for (const permission of ownerPermissions) {
-    await prisma.rolePermission.upsert({
-      where: {
-        roleId_permissionId: {
-          roleId: ownerRole.id,
-          permissionId: permission.id,
-        },
-      },
-      update: {},
-      create: {
-        roleId: ownerRole.id,
+        roleId: superAdminRole.id,
         permissionId: permission.id,
       },
     });
@@ -440,15 +405,17 @@ async function main() {
   // 4. Crearea utilizatorului Super Admin
   console.log("👤 Creating Super Admin user...");
 
-  const hashedPassword = await bcrypt.hash("admin123", 12);
+  // Hash the admin password
+  const hashedPassword = await bcrypt.hash("admin123", 10);
 
+  // Create super admin user
   await prisma.user.upsert({
     where: { email: "admin@aquasync.com" },
     update: {},
     create: {
       email: "admin@aquasync.com",
       name: "Super Administrator",
-      password: hashedPassword,
+      hashedPassword,
       roleId: superAdminRole.id,
       isActive: true,
     },

@@ -1,7 +1,7 @@
 # Task ID: 29
 # Title: Notificări Email
 # Status: pending
-# Dependencies: None
+# Dependencies: 28
 # Priority: medium
 # Description: Implementarea sistemului de notificări prin email
 # Details:

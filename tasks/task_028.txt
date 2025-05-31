@@ -1,7 +1,7 @@
 # Task ID: 28
 # Title: Backend Notificări
 # Status: pending
-# Dependencies: None
+# Dependencies: 10
 # Priority: medium
 # Description: Implementarea sistemului backend pentru notificări
 # Details:

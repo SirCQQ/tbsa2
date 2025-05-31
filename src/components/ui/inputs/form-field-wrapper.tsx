@@ -23,16 +23,20 @@ export function FormFieldWrapper({
   className,
 }: FormFieldWrapperProps) {
   return (
-    <FormItem className={className}>
+    <FormItem className={`grid gap-1.5 ${className || ""}`}>
       {label && (
-        <FormLabel>
+        <FormLabel className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
           {label}
           {required && <span className="text-destructive ml-1">*</span>}
         </FormLabel>
       )}
-      <FormControl>{children}</FormControl>
-      {helperText && <FormDescription>{helperText}</FormDescription>}
-      <FormMessage />
+      <FormControl className="h-10">{children}</FormControl>
+      <div className="min-h-[20px]">
+        {helperText && (
+          <FormDescription className="text-xs">{helperText}</FormDescription>
+        )}
+        <FormMessage className="text-xs" />
+      </div>
     </FormItem>
   );
 }
